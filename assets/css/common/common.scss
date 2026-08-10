@@ -1,0 +1,62 @@
+@charset "UTF-8";
+html{
+	font-size: 10px;
+	@media screen and (min-width: 1600px){
+		font-size: 11px;
+	}
+	@media screen and (max-width: 1340px){
+		font-size: 9px;
+	}
+
+	@media screen and (max-width: 980px){
+		font-size: 10px;
+	}
+	@media screen and (max-width: 350px){
+		font-size: 9px;
+	}
+}
+body {
+	font-size: 14px;
+	color: #fff;
+	background: #1A2134;
+	line-height: 1;
+	letter-spacing: 0.02em;
+	font-family: YakuHanMP,'nhaasgrotesk',"source-han-sans-japanese", sans-serif, Helvetica, Helvetica Neue, Arial, Verdana;
+	-webkit-font-smoothing: antialiased;
+	width: 100%;
+	-webkit-text-size-adjust: 100%;
+	left:0;
+	right:0;
+	margin: auto;
+	&.noScroll{
+		overflow: hidden;
+	}
+}
+h1,h2,h3,h4,h5{
+	font-weight: 400;
+}
+
+.article_page,
+.article_post {
+	background: #312c24;
+	min-height: 100vh;
+	padding-top: 120px;
+}
+
+.section_inner{
+	@include wrapper;
+}
+.section_inner_new{
+	@include wrapper;
+}
+
+button{
+	color: inherit;
+	appearance: none;
+	box-shadow: none;
+	border: none;
+	background-color: transparent;
+	padding: 0;
+	margin: 0;
+	cursor: pointer;
+}

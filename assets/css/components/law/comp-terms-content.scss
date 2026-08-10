@@ -1,0 +1,16 @@
+.comp-terms-content{
+  .item_wrap{
+    margin-bottom: 40px;
+    &:nth-last-of-type(1){
+      margin-bottom: 0;
+    }
+    .ttl_h3{
+      font-size: 1.8rem;
+      line-height: 1.5;
+      margin-bottom: 10px;
+    }
+    .desc_wrap{
+      @include basicP;
+    }
+  }
+}

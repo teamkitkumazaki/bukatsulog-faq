@@ -1,0 +1,57 @@
+.comp-transaction-contents{
+  .flex_wrap{
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #d8d8d8;
+    &:nth-last-of-type(1){
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: 0px;
+    }
+    .def_lst_dt{
+      display: block;
+      text-align: left;
+      font-size: 1.5rem;
+      line-height: 1.8;
+      margin-bottom: 5px;
+      br{
+        display: none;
+      }
+    }
+    .def_lst_dd{
+      font-size: 1.4rem;
+      line-height: 1.6;
+      a{
+        color: inherit;
+        @include hover;
+      }
+      button{
+        text-decoration: underline;
+      }
+      p{
+        margin-bottom: 10px;
+        &:nth-last-of-type(1){
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 980px){
+  .comp-transaction-contents{
+    .flex_wrap{
+      .def_lst_dt{
+        font-size: 1.6rem;
+        margin-bottom: 5px;
+        br{
+          display: none;
+        }
+      }
+      .def_lst_dd{
+        font-size: 1.5rem;
+        line-height: 1.6;
+      }
+    }
+  }
+}

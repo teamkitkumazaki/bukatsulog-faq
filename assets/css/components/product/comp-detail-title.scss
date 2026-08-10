@@ -1,0 +1,30 @@
+.comp-detail-title{
+  margin-bottom: 25px;
+  hgroup{
+    .title_en{
+      @include grotesk;
+      display: block;
+      font-size: 2.0rem;
+      margin-bottom: 12px;
+    }
+    .title_ja{
+      font-size: 1.3rem;
+    }
+  }
+}
+
+@media screen and (min-width: 980px){
+  .comp-detail-title{
+    margin-bottom: 35px;
+    hgroup{
+      .title_en{
+        font-size: 2.6rem;
+        margin-bottom: 15px;
+      }
+      .title_ja{
+        font-size: 1.6rem;
+      }
+    }
+  }
+
+}

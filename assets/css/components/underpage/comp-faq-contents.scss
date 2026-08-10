@@ -1,0 +1,148 @@
+.comp-faq-contents{
+  margin-bottom: 45px;
+  &:nth-last-of-type(1){
+    margin-bottom: 0;
+  }
+  .faq_ttl{
+    display: block;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    .ttl_en{
+      display: block;
+      font-size: 2.6rem;
+      margin-right: 10px;
+    }
+    .ttl_ja{
+      font-size: 1.3rem;
+      letter-spacing: 0.05em;
+      margin-bottom: 0px;
+    }
+  }
+  .item_wrap{
+    .ttl_h3{
+      font-size: 1.6rem;
+      letter-spacing: 0.05em;
+      margin-top: 30px;
+      margin-bottom: 20px;
+    }
+    .toggle_item{
+      overflow: hidden;
+      transition: height .2s;
+      will-change: height;
+      min-height: 55px;
+      margin-bottom: 5px;
+      .toggle_button{
+        width: 100%;
+        position: relative;
+        padding: 15px 40px;
+        font-family: inherit;
+        font-size: 1.4rem;
+        letter-spacing: 0.03em;
+        color: $basicGreen;
+        line-height: 1.5;
+        text-align: left;
+        background: transparent;
+        border: solid 1px #d8d8d8;
+        &::before{
+          display: block;
+          content: "Q.";
+          position: absolute;
+          @include libre-r;
+          color: $basicGreen;
+          font-size: 1.6rem;
+          top: 14px;
+          left: 15px;
+          margin: auto;
+          width: 15px;
+          height: 15px;
+        }
+        &::after{
+          display: block;
+          content: "";
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          right: 15px;
+          margin: auto;
+          width: 15px;
+          height: 15px;
+          @include bgSet;
+          background-size: contain;
+          background-image: url(https://journal.komons-japan.com/wp-content/themes/komons-theme/img/faq/plus.png);
+        }
+        &.active{
+          &::after{
+            background-image: url(https://journal.komons-japan.com/wp-content/themes/komons-theme/img/faq/minus.png);
+          }
+        }
+      }
+      .toggle_contents{
+        .contents_inner{
+          padding: 20px 10px 20px 40px;
+          position: relative;
+          line-height: 1.8;
+          font-size: 1.4rem;
+          letter-spacing: 0.05em;
+          p{
+            span{
+              display: block;
+              margin-bottom: 0.75em;
+              &:nth-last-of-type(1){
+                margin-bottom: 0;
+              }
+            }
+            a{
+              color: #068acc;
+            }
+          }
+          &::before{
+            display: block;
+            content: "A.";
+            position: absolute;
+            @include libre-r;
+            color: $basicGreen;
+            font-size: 1.6rem;
+            top: 19px;
+            left: 15px;
+            margin: auto;
+            width: 15px;
+            height: 15px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 720px){
+  .comp-faq-contents{
+    margin-bottom: 80px;
+    .faq_ttl{
+      @include flexSet;
+      justify-content: flex-start;
+      align-items: baseline;
+      margin-bottom: 30px;
+      .ttl_en{
+        font-size: 3.0rem;
+        margin-right: 10px;
+      }
+      .ttl_ja{
+        font-size: 1.6rem;
+      }
+    }
+    .item_wrap{
+      .ttl_h3{
+        font-size: 1.8rem;
+        margin-top: 40px;
+        margin-bottom: 25px;
+      }
+      .toggle_item{
+        margin-bottom: 5px;
+        .toggle_button{
+          font-size: 1.5rem;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

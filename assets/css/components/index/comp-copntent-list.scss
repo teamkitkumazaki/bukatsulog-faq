@@ -1,0 +1,133 @@
+.comp-copntent-list{
+  .content_ttl{
+    @include grotesk;
+    font-size: 2.0rem;
+    margin-bottom: 30px;
+  }
+  .content_wrapper{
+    .content_item{
+      margin-bottom: 30px;
+      &:nth-last-of-type(1){
+        margin-bottom: 0;
+      }
+      a{
+        display: block;
+        color: inherit;
+        .img_wrap{
+          display: block;
+          margin-bottom: 25px;
+        }
+        .content_wrap{
+          display: block;
+          .ttl_jp{
+            display: block;
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+          }
+          .ttl_en{
+            @include grotesk;
+            @include flexSet;
+            justify-content: flex-start;
+            align-items: center;
+            .txt{
+              font-size: 1.6rem;
+              margin-right: 10px;
+            }
+            .caret{
+              width: 18px;
+              height: 18px;
+              border-radius: 50%;
+              background: $basicGreen;
+              @include flexSet;
+              align-items: center;
+              justify-content: center;
+              svg{
+                width: 4px;
+                .cls-1{
+                  fill: #fff;
+                  stroke:none;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 980px){
+  .comp-copntent-list{
+    .content_ttl{
+      font-size: 2.4rem;
+      margin-bottom: 40px;
+    }
+    .content_wrapper{
+      @include flexSet;
+      .content_item{
+        width: 47%;
+        margin-right: 6%;
+        margin-bottom: 0px;
+        &:nth-of-type(2n){
+          margin-right: 0;
+        }
+        &:nth-last-of-type(1){
+          margin-bottom: 0;
+        }
+        a{
+          display: block;
+          color: inherit;
+          .img_wrap{
+            display: block;
+            margin-bottom: 35px;
+            overflow: hidden;
+            img{
+              transition: transform .3s, filter .3s;
+              will-change: transform, filter;
+            }
+          }
+          .content_wrap{
+            .ttl_jp{
+              font-size: 1.5rem;
+              margin-bottom: 15px;
+            }
+            .ttl_en{
+              .txt{
+                font-size: 2.0rem;
+                margin-right: 12px;
+              }
+              .caret{
+                width: 22px;
+                height: 22px;
+                svg{
+                  width: 5px;
+                }
+              }
+            }
+          }
+          &:hover{
+            color: $hoverColor;
+            .img_wrap{
+              img{
+                transform: scale(1.05);
+                filter: brightness(0.90);
+              }
+            }
+            .content_wrap{
+              .ttl_en{
+                .caret{
+                  background: $hoverColor;
+                  width: 22px;
+                  height: 22px;
+                  svg{
+                    width: 5px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

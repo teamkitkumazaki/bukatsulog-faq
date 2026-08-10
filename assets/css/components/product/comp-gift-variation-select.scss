@@ -1,0 +1,194 @@
+.comp-gift-variation-select{
+  position: relative;
+  padding-bottom: 50px;
+  margin-bottom: 35px;
+  .title_wrap{
+    .gift_option_ttl{
+      font-size: 1.6rem;
+      margin-bottom: 20px;
+      span{
+        display: inline-block;
+        font-size: 1.2rem;
+        padding-left: 5px;
+      }
+    }
+    .detail_button{
+      position: absolute;
+      left:0;
+      right:0;
+      bottom:0;
+      margin: auto;
+      width: 100%;
+      button{
+        width: 100%;
+        @include flexSet;
+        justify-content: center;
+        align-items: center;
+        .icon{
+          width: 20px;
+          margin-right: 8px;
+        }
+        .txt{
+          font-size: 1.4rem;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  .gift_otion_wrap{
+    border-bottom: 0px solid $basicGreen;
+    .option_item{
+      label{
+        padding: 10px;
+        @include flexSet;
+        justify-content: flex-start;
+        align-items: center;
+        background: #f4f4f4;
+        transition: background .3s, color .3s;
+        will-change: background, color;
+        margin-bottom: 3px;
+        cursor: pointer;
+        .option_img{
+          width: 50px;
+          margin-right: 15px;
+        }
+        .input_wrap{
+          max-width: calc(100% - 65px);
+          width: 100%;
+          @include flexSet;
+          justify-content: flex-start;
+          align-items: center;
+          input[type="checkbox"]{
+            display: none;
+          }
+          .radio_checker{
+            width: 13px;
+            height: 13px;
+            border: 1px solid #979797;
+            background: #fff;
+            border-radius: 50%;
+            margin-right: 5px;
+            position: relative;
+          }
+          input[type="checkbox"]:checked + .radio_checker{
+            &::before{
+              display: block;
+              content: "";
+              position: absolute;
+              top: -1px;
+              bottom: -1px;
+              left: 0;
+              right: 0;
+              margin: auto;
+              width: 7px;
+              height: 7px;
+              background: #333;
+              border-radius: 50%;
+            }
+          }
+          .option_name{
+            width: calc(100% - 22px);
+            @include flexSet;
+            justify-content: space-between;
+            align-items: center;
+            .name{
+              font-size: 1.4rem;
+              line-height: 1;
+              letter-spacing: 0.51px;
+              margin-right: 5px;
+            }
+            .price, .text_p{
+              font-size: 1.2rem;
+              line-height: 1;
+              letter-spacing: 1px;
+              transition: color .3s;
+              will-change: color;
+            }
+          }
+        }
+        &.active_label{
+          background: $keyColor;
+          color: #fff;
+          border-bottom: 1px solid #f4f4f4;
+          border-bottom: 0px;
+          .input_wrap{
+            .price, .text_p{
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 980px){
+  .comp-gift-variation-select{
+    position: relative;
+    padding-bottom: 0px;
+    margin-bottom: 40px;
+    .title_wrap{
+      @include flexSet;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 25px;
+      .gift_option_ttl{
+        font-size: 1.8rem;
+        margin-bottom: 0px;
+        span{
+          font-size: 1.4rem;
+        }
+      }
+      .detail_button{
+        position: static;
+        width: unset;
+        margin: 0;
+        button{
+          width: unset;
+          @include flexSet;
+          justify-content: center;
+          align-items: center;
+          .icon{
+            width: 20px;
+            margin-right: 8px;
+          }
+          .txt{
+            font-size: 1.4rem;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+    .gift_otion_wrap{
+      .option_item{
+        label{
+          padding: 15px;
+          margin-bottom: 5px;
+          .option_img{
+            width: 70px;
+            margin-right: 20px;
+          }
+          .input_wrap{
+            max-width: calc(100% - 90px);
+            width: 100%;
+            @include flexSet;
+            justify-content: flex-start;
+            align-items: center;
+            input[type="checkbox"]{
+              display: none;
+            }
+            .option_name{
+              width: calc(100% - 22px);
+              .name{
+                font-size: 1.6rem;
+              }
+              .price, .text_p{
+                font-size: 1.4rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,161 @@
+.comp-list-cart-button{
+  .soldout{
+    border: 1px solid #d8d8d8;
+    display: block;
+    height: 46px;
+    line-height: 46px;
+    text-align: center;
+    font-size: 16px;
+    letter-spacing: 0.8px;
+    margin-top: 17px;
+    color: #979797;
+  }
+  .gift_detail_button{
+    display: block;
+    width: 100%;
+    text-align: center;
+    background: #f1f1f1;
+    height: 48px;
+    line-height: 48px;
+    font-size: 16px;
+    color: #00381f;
+    span{
+      display: inline-block;
+      position: relative;
+      padding-right: 30px;
+      &::before{
+        display: block;
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: 15px;
+        top: 0;
+        bottom: 0;
+        right: 0px;
+        transition: right 0.5s;
+        margin: auto;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-image: url(https://res.cloudinary.com/dbwqcy0op/image/upload/f_auto,q_auto/v1583750620/common/arrow_vuojtf.png);
+        background-size: contain;
+        background-position: center center;
+      }
+    }
+    &:hover{
+      span{
+        &::before{
+          right: -10px;
+        }
+      }
+    }
+  }
+  .cartin_button{
+    position: relative;
+    cursor: pointer;
+    a,button{
+      @include flexSet;
+      display: flex !important;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 0;
+      background: #f1f1f1;
+      border: 1px solid #f1f1f1;
+      width: 100%;
+      appearance: none;
+      box-shadow: none;
+      font-family: inherit;
+      color: $basicGreen;
+      font-size: 1.2rem;
+      line-height: 1;
+      letter-spacing: 0.4px;
+      .icon{
+        display: block;
+        width: 16px;
+        margin-right: 8px;
+        svg{
+          .cls-1{
+            fill: $basicGreen;
+          }
+        }
+      }
+      &:focus{
+        outline: none;
+      }
+    }
+    input{
+      display: block;
+      width: 100%;
+      position: absolute;
+      top:0;
+      bottom:0;
+      left:0;
+      right:0;
+      z-index: 10;
+      margin: auto;
+      cursor: pointer;
+      opacity: 0;
+    }
+  }
+}
+
+@media screen and (min-width: 980px){
+  .comp-list-cart-button{
+    .soldout{
+      height: 38px;
+      line-height: 38px;
+      font-size: 12px;
+      letter-spacing: 0.5px;
+      margin-top: -5px;
+    }
+    .gift_detail_button{
+      height: 42px;
+      line-height: 42px;
+      margin-top: -6px;
+      span{
+        display: inline-block;
+        position: relative;
+        padding-right: 30px;
+      }
+      &:hover{
+        span{
+          &::before{
+            right: 0px;
+          }
+        }
+      }
+    }
+    .cartin_button{
+      a,button{
+        padding: 12px 0;
+        font-size: 1.5rem;
+        letter-spacing: 0.3px;
+        transition: background .3s, color .3s;
+        will-change: background, color;
+        .icon{
+          display: block;
+          width: 20px;
+          margin-right: 10px;
+          svg{
+            .cls-1{
+              transition: fill .3s;
+              will-change: fill;
+            }
+          }
+        }
+      }
+      &:hover{
+        button{
+          background: $basicGreen;
+          color: #fff;
+          .icon{
+            svg{
+              .cls-1{
+                fill: #fff;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

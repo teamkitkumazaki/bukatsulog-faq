@@ -1,0 +1,98 @@
+.comp-address-list{
+  .address_item{
+    padding-bottom: 25px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid $borderColor;
+    &:nth-of-type(1){
+      margin-top: -5px;
+    }
+    .userinfo{
+      .username{
+        display: block;
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+      }
+      .address{
+        p{
+          font-size: 1.4rem;
+          line-height: 1.8;
+          span{
+            display: block;
+          }
+        }
+      }
+    }
+    .btn_wrap{
+      @include flexSet;
+      justify-content: flex-start;
+      margin-top: 15px;
+      .btn{
+        display: block;
+        width: 100%;
+        font-weight: normal;
+        font-family: inherit;
+        border: none;
+        transition: background .2s;
+        padding: 5px 0;
+        text-align: center;
+        border-radius: 5px;
+        cursor: pointer;
+        &.btn_edit{
+          background: $black02;
+          color: #fff;
+          &:hover{
+            background: $hoverColor;
+          }
+        }
+        &.btn_delete{
+          background: $bgColor;
+          &:hover{
+            background: $borderColor;
+          }
+        }
+      }
+      .edit_wrap{
+        width:95px;
+        margin-right: 10px;
+      }
+      .address-delete-form{
+        width: 95px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 720px){
+  .comp-address-list{
+    .address_item{
+      .userinfo{
+        .username{
+          font-size: 1.8rem;
+        }
+        .address{
+          p{
+            span{
+              display: inline-block;
+              margin-right: 0.5em;
+              &:nth-last-of-type(1){
+                margin-right: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 980px){
+  .comp-address-list{
+    .address_item{
+      @include flexSet;
+      justify-content: space-between;
+      .userinfo{
+        width: calc(100% - 260px);
+      }
+    }
+  }
+}

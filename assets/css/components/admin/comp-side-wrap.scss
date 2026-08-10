@@ -1,0 +1,50 @@
+.comp-side-wrap{
+  width: 100vw;
+  background: #fff;
+  margin: 0 -5vw;
+  padding: 50px 7vw 60px;
+  box-sizing: border-box;
+  .cart_item_error{
+    font-size: 1.4rem;
+    line-height: 1.8;
+    background: $basicGreen;
+    color: #fff;
+    padding: 20px;
+    @media screen and (min-width: 1100px){
+      padding: 0px;
+      font-size: 1.6rem;
+      background: transparent;
+      color: $basicGreen;
+    }
+  }
+  .create_account{
+    text-align: center;
+    margin-top: 25px;
+    a{
+      display: block;
+      color: inherit;
+      text-decoration: underline;
+    }
+  }
+  &.bg{
+    @media screen and (max-width: 720px){
+      background: #f1f1f1;
+      margin: 50px -5vw;
+    }
+  }
+}
+@media screen and (min-width: 720px){
+  .comp-side-wrap{
+    padding: 60px 5vw 80px;
+  }
+}
+
+@media screen and (min-width: 1100px){
+  .comp-side-wrap{
+    width: 100%;
+    padding: 40px 35px;
+    background: $bgColor;
+    border-radius: 0px;
+    margin: 0px;
+  }
+}

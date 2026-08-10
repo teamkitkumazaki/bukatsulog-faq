@@ -1,0 +1,93 @@
+.comp-shippment-policy{
+  background: #fff;
+  padding: 0px 20px;
+  margin-top: 20px;
+  height: 70px;
+  overflow: hidden;
+  transition: height .4s;
+  will-change: height;
+  .policy_ttl{
+    display: block;
+    padding: 20px 0;
+    width: 100%;
+    @include nijimi;
+    font-size: 1.5rem;
+    color: inherit;
+    text-align: left;
+    @include bgSet;
+    cursor: pointer;
+    background-position: center right;
+    background-size: 10px;
+    background-color: transparent;
+    background-image: url(https://cdn.shopify.com/s/files/1/0606/6932/9625/t/1/assets/caret_down.svg);
+    appearance: none;
+    border: none;
+    box-shadow: none;
+  }
+  .shippment_toggle{
+    .policy_item{
+      padding-bottom: 15px;
+      &:nth-last-of-type(1){
+        padding-bottom: 25px;
+      }
+      .item_ttl{
+        font-size: 1.3rem;
+        @include nijimi;
+        padding-left: 15px;
+        position: relative;
+        margin-bottom: 5px;
+        &:nth-last-of-type(1){
+          margin-bottom: 0;
+        }
+        &::before{
+          display: block;
+          content: "";
+          width: 6px;
+          height: 6px;
+          background: $black02;
+          border-radius: 50%;
+          position: absolute;
+          top: 9px;
+          left:0;
+        }
+      }
+      .desc_wrap{
+        padding-left: 15px;
+        p{
+          font-size: 1.1rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 720px){
+  .comp-shippment-policy{
+    padding: 0px 25px;
+    margin-top: 40px;
+    height: 95px;
+    .policy_ttl{
+      padding: 25px 0;
+      font-size: 1.6rem;
+    }
+    .shippment_toggle{
+      .policy_item{
+        padding-bottom: 20px;
+        &:nth-last-of-type(1){
+          padding-bottom: 35px;
+        }
+        .item_ttl{
+          font-size: 1.5rem;
+          &::before{
+            top: 12px;
+          }
+        }
+        .desc_wrap{
+          p{
+            font-size: 1.3rem;
+          }
+        }
+      }
+    }
+  }
+}

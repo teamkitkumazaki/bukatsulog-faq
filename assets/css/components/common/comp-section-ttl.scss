@@ -1,0 +1,36 @@
+.comp-section-ttl{
+  margin-bottom: 15px;
+  hgroup{
+    line-height: 1.5;
+    .ttl_en{
+      display: block;
+      font-size: 3.0rem;
+    }
+    .ttl_ja{
+      display: block;
+      position: relative;
+      font-size: 1.6rem;
+      text-indent: 0.05em;
+    }
+  }
+  .lead_txt{
+    @include basicP;
+    margin-top: 15px;
+  }
+}
+
+@media screen and (min-width: 980px){
+  .comp-section-ttl{
+    margin-bottom: 25px;
+    hgroup{
+      .ttl_en{
+        font-size: 3.4rem;
+        margin-bottom: 5px;
+      }
+      .ttl_ja{
+        font-size: 1.8rem;
+      }
+    }
+  }
+
+}

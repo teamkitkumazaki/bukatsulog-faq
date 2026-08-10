@@ -1,0 +1,214 @@
+.comp-browse-history{
+  .upsell_ttl{
+    font-size: 26px;
+    margin-bottom: 60px;
+  }
+  .rktheme-widget-container{
+    max-width: unset !important;
+    .rktheme-widget-title{
+      display: none;
+    }
+    .rktheme-grid{
+      margin: 0 !important;
+      @include flexSet;
+      justify-content: flex-start;
+      li{
+        width: 22% !important;
+        margin-right: 4%;
+        padding: 0 !important;
+        margin-bottom: 60px;
+        &:nth-of-type(4n){
+          margin-right: 0;
+        }
+        .rktheme-product-image-wrap{
+          overflow: visible !important;
+          height: auto;
+          @include hover;
+          padding: 0 !important;
+          .rktheme-product-image{
+            position: static !important;
+            opacity: 1 !important;
+            &:nth-of-type(n+2){
+              display: none !important;
+            }
+          }
+        }
+        .rktheme-product-details{
+          display: block !important;
+          padding: 10px 0;
+          position: relative;
+          .ja{
+            display: block;
+            font-size: 12px;
+            margin-bottom: 10px;
+            color: #646464;
+          }
+          .rktheme-product-title{
+            display: block !important;
+            text-align: left;
+            font-size: 16px !important;
+            letter-spacing: 0.03em;
+            line-height: 1.6;
+            min-height: unset !important;
+            color: $basicGreen !important;
+          }
+          .rktheme-product-price-wrap{
+            text-align: left !important;
+            font-weight: normal !important;
+            color: #646464;
+            font-size: 14px !important;
+            letter-spacing: 0.44px;
+            color: $basicGreen !important;
+          }
+          .rktheme-addtocart-container{
+            margin-top: 30px !important;
+            padding: 0 !important;
+            /*position: absolute;*/
+            bottom: 0;
+            left:0;
+            right: 0;
+            .rktheme-addtocart-select-arrow{
+              display: none !important;
+            }
+            /*margin: auto;*/
+            button, select{
+              border: 1px solid #f1f1f1;
+              background-color: #f1f1f1 !important;
+              color: $basicGreen !important;
+              padding: 5px 0;
+              font-family: inherit;
+              font-weight: normal;
+              padding: 5px 15px;
+              font-size: 14px;
+              letter-spacing: 0.03em;
+              cursor: pointer;
+              &:focus{
+                outline: none;
+                border: 1px solid #d8d8d8;
+              }
+            }
+            select{
+              background-image: url(https://journal.komons-japan.com/wp-content/themes/komons-theme/img/contact/selector_caret.png) !important;
+              background-size: 10px !important;
+              background-repeat: no-repeat !important;
+              background-position: center right 15px !important;
+            }
+            button{
+              @include hover;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 980px){
+  .comp-browse-history{
+    .upsell_ttl{
+      font-size: 26px;
+      margin-bottom: 60px;
+    }
+    .rktheme-widget-container{
+      max-width: unset !important;
+      .rktheme-widget-title{
+        display: none;
+      }
+      .rktheme-grid{
+        margin: 0 !important;
+        @include flexSet;
+        justify-content: flex-start;
+        li{
+          width: 30% !important;
+          margin-right: 5%;
+          padding: 0 !important;
+          margin-bottom: 60px;
+          &:nth-of-type(4n){
+            margin-right: 5%;
+          }
+          &:nth-of-type(3n){
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 720px){
+  .comp-browse-history{
+    overflow: hidden;
+    width: 94vw;
+    .upsell_ttl{
+      font-size: 5.5vw;
+      margin-bottom: 40px;
+    }
+    .rktheme-widget-container{
+        width: 100%;
+        max-width: unset !important;
+        overflow: scroll;
+        -webkit-overflow-scrolling: touch;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        &::-webkit-scrollbar{
+          display: none;
+        }
+      .rktheme-grid{
+        width: calc(56vw * 8);
+        li{
+          width: 50vw !important;
+          margin-right: 6vw;
+          margin-bottom: 0;
+          &:nth-of-type(4n){
+            margin-right: 6vw;
+          }
+          &:nth-of-type(3n){
+            margin-right: 6vw;
+          }
+          .rktheme-product-details{
+            display: block !important;
+            padding: 10px 0;
+            position: relative;
+            min-height: 160px;
+            .ja{
+              font-size: 10px;
+            }
+            .rktheme-product-title{
+              font-size: 14px !important;
+            }
+            .rktheme-product-price-wrap{}
+            .rktheme-addtocart-container{
+              position: absolute;
+              bottom: 0;
+              border-top: 1px solid #d8d8d8;
+              padding-top: 10px !important;
+              button, select{
+                background-color: transparent !important;
+                border: none !important;
+                text-align: left;
+                padding: 0;
+              }
+              button{
+                background-image: url(https://res.cloudinary.com/dbwqcy0op/image/upload/f_auto,q_auto/v1583750795/common/icon_plus_ktb441.png);
+                background-size: 8px !important;
+                background-repeat: no-repeat !important;
+                background-position: center right 5px !important;
+              }
+              select{
+                background-size: 8px !important;
+                background-repeat: no-repeat !important;
+                background-position: center right 5px !important;
+              }
+            }
+          }
+        }
+      }
+    }
+    &.pickup{
+      .rktheme-widget-container{
+        .rktheme-grid{
+          width: calc(56vw * 4);
+        }
+      }
+    }
+  }
+}

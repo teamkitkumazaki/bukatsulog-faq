@@ -1,0 +1,143 @@
+.comp-order-list {
+  width: 100%;
+  margin-top: 25px;
+  .order_item {
+    margin-bottom: 20px;
+    &:nth-of-type(n + 6){
+      display: none;
+    }
+    .order_bar {
+      position: relative;
+      border-radius: 5px;
+      background-color: $bgColor;
+      color: inherit;
+      padding: 15px 15px;
+      @include flexSet;
+      justify-content: space-between;
+      align-items: center;
+      .bar_text{
+        width: calc(100% - 50px);
+        @include flexSet;
+        align-items: center;
+        justify-content: flex-start;
+        font-size: 1.6rem;
+        line-height: 1.6;
+        .title{
+          display: block;
+          letter-spacing: 0.05em;
+          margin-right: 0.2em;
+        }
+        .order_num{
+          display: block;
+          color: #068acc;
+          @include hover;
+        }
+        .price{
+          width: 100%;
+          display: block;
+          font-size: 1.4rem;
+          margin-top: 5px;
+          font-weight: 400;
+        }
+      }
+      .circle {
+        position: relative;
+        width: 35px;
+        height: 35px;
+        border-radius: 24px;
+        background-color: $black02;
+        transition: background .3s;
+        .circle-inner {
+          position: absolute;
+          display: block;
+          width: 7px;
+          height: 7px;
+          top:0;
+          bottom:0;
+          left:0;
+          right:4px;
+          margin: auto;
+          transform: rotate(-45deg);
+          border-bottom: solid 1px #fff;
+          border-right: solid 1px #fff;
+        }
+      }
+      &:hover{
+        .circle {
+          background-color: $hoverColor;
+        }
+      }
+    }
+    .order_condition {
+      margin: 15px 0 0;
+      padding: 0 10px;
+      line-height: 1.8;
+      span{
+        font-size: 1.3rem;
+        display: block;
+      }
+    }
+  }
+  &.display{
+    .order_item {
+      margin-bottom: 20px;
+      &:nth-of-type(n + 6){
+        display: block;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 720px){
+  .comp-order-list {
+    margin-top: 30px;
+    margin-bottom: 40px;
+    .order_item {
+      margin-bottom: 25px;
+      .order_bar {
+        padding: 15px 15px 12px;
+        .bar_text{
+          .order_num{
+            margin-right: 1em;
+          }
+          .price{
+            width: unset;
+            font-size: 1.4rem;
+            margin-top: 0px;
+          }
+        }
+      }
+      .order_condition {
+        margin: 20px 5px 0;
+        padding: 0 10px;
+        @include flexSet;
+        justify-content: flex-start;
+        span{
+          display: block;
+          position: relative;
+          margin-right: 1em;
+          padding-right: 1em;
+          &::after{
+            display: block;
+            content: "";
+            position: absolute;
+            top:0;
+            bottom:0;
+            right:0;
+            margin: auto;
+            width: 1px;
+            height: 15px;
+            background: #d8d8d8;
+          }
+          &:nth-last-of-type(1){
+            margin-right: 0em;
+            padding-right: 0em;
+            &::after{
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}

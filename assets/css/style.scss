@@ -1,0 +1,55 @@
+@charset "UTF-8";
+
+@import 'mixin.scss'; //ミックスイン
+
+/* ########## 共通セクション ########## */
+
+@import 'common/reset.scss'; //デフォルトCSSのリセット
+@import 'common/header.scss'; //ヘッダー
+@import 'common/common.scss'; //共通レイアウト
+@import 'common/hummenu.scss'; //共通レイアウト
+
+
+
+/* 共通 */
+@import 'components/common/comp-button-wrap.scss';
+@import 'components/common/comp-sns-wrap.scss';
+@import 'components/common/comp-page-main.scss';
+@import 'components/common/comp-page-bread.scss';
+@import 'components/common/comp-section-ttl.scss';
+@import 'components/common/comp-pop-menu.scss';
+@import 'components/common/comp-pager.scss';
+@import 'components/common/comp-box-button.scss';
+@import 'components/common/comp-new-section-ttl.scss';
+@import 'components/common/comp-section-information.scss';
+
+
+/* 下層ページ */
+@import 'components/underpage/comp-category-button.scss';
+@import 'components/underpage/comp-stock-list.scss';
+@import 'components/underpage/comp-faq-contents.scss';
+@import 'components/underpage/comp-gift-service-wrap.scss';
+
+/* 法的ページ */
+@import 'components/law/comp-transaction-contents.scss';
+@import 'components/law/comp-terms-content.scss';
+
+/* 管理画面系 */
+@import 'components/admin/comp-admin-title.scss';
+@import 'components/admin/comp-admin-subttl.scss';
+@import 'components/admin/comp-admin-button.scss';
+@import 'components/admin/comp-side-wrap.scss';
+@import 'components/admin/comp-admin-form.scss';
+@import 'components/admin/comp-user-address.scss';
+@import 'components/admin/comp-address-list.scss';
+@import 'components/admin/comp-order-list.scss';
+@import 'components/admin/comp-admin-hr.scss';
+@import 'components/admin/comp-form-message.scss';
+@import 'components/admin/comp-page-log.scss';
+@import 'components/admin/comp-sns-alignment.scss';
+@import 'components/admin/comp-form-wrap.scss';
+
+
+
+/* ########## ページ別レイアウト ########## */
+@import 'page/guide.scss'; //ショッピングガイド系

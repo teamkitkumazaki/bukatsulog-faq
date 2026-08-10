@@ -1,0 +1,113 @@
+.comp-product-images {
+  .thumb_img {
+    margin-bottom: 10px;
+    height: 92vw;
+    @include flexSet;
+    align-items: center;
+    justify-content: center;
+    background: #f8f8f8;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .thumbnails {
+    width: 96vw;
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    .thumb_inner {
+      width: calc(23.7vw * var(--thumbItem) + 2vw);
+      display: flex;
+      flex-wrap: unset;
+      transform: translate(-5px,0);
+
+      .thumb_item {
+        width: 23.7vw;
+        padding: 0 5px;
+        box-sizing: border-box;
+
+        button {
+          display: block;
+          width: 100%;
+          height: 21vw;
+          @include flexSet;
+          align-items: center;
+          background: #f8f8f8;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 780px) {
+  .comp-product-images {
+    @include flexSet;
+    justify-content: space-between;
+
+    .thumb_img {
+      width: calc(100% - 90px);
+      order: 1;
+      margin-bottom: 10px;
+      height: auto;
+      height: 40vw;
+      max-height: 685px;
+
+      img {
+        object-fit: unset;
+        max-height: 685px;
+      }
+    }
+
+    .thumbnails {
+      order: 0;
+      width: 80px;
+      min-height: 80px;
+
+      .thumb_inner {
+        width: 80px;
+        display: block;
+        transform: translate(0,-5px);
+
+        .thumb_item {
+          width: 80px;
+          height: 80px;
+          padding: 0;
+          box-sizing: border-box;
+          overflow: hidden;
+          margin-bottom: 10px;
+
+          button {
+            overflow: hidden;
+            height: 80px;
+
+            img {
+              transition: transform 0.3s,filter 0.3s;
+              will-change: transform, filter;
+            }
+
+            &:hover {
+              img {
+                transform: scale(1.1);
+                filter: brightness(80%);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

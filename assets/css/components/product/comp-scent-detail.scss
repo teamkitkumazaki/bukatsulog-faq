@@ -1,0 +1,113 @@
+.comp-scent-detail{
+  .scent_img_wrap{
+    padding: 10px 0px;
+    margin-bottom: 20px;
+    img{
+      width: 100%;
+    }
+  }
+  .scent_desc{
+    font-size: 1.4rem;
+    letter-spacing: 0.05em;
+    line-height: 1.8;
+    margin-bottom: 25px;
+  }
+  .scent_txt_wrap{
+    .scent_main_ttl{
+      font-size: 1.4rem;
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+    .scent_structure{
+      border: 1px solid $basicGreen;
+      .scent_item{
+        border-bottom: 1px solid $insertGreen;;
+        padding: 20px;
+        &:nth-last-of-type(1){
+          border-bottom: 0px solid $insertGreen;;
+        }
+        .title{
+          @include grotesk;
+          display: block;
+          font-size: 1.6rem;
+          margin-bottom: 10px;
+        }
+        .content{
+          font-size: 1.3rem;
+          line-height: 1.6;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 720px){
+  .comp-scent-detail{
+    .comp-detail-title{
+      margin-bottom: 30px;
+    }
+    .scent_desc{
+      font-size: 1.5rem;
+      margin-bottom: 30px;
+    }
+    .scent_img_wrap{
+      padding:30px 60px;
+      margin-bottom: 30px;
+    }
+    .scent_txt_wrap{
+      .scent_main_ttl{
+        font-size: 2.2rem;
+        margin-bottom: 15px;
+      }
+      .scent_structure{
+        .scent_item{
+          @include flexSet;
+          justify-content: flex-start;
+          .title{
+            width: 100px;
+            font-size: 1.6rem;
+            margin-top: 4px;
+            margin-bottom: 0px;
+          }
+          .content{
+            width: calc(100% - 100px);
+            font-size: 1.4rem;
+            letter-spacing: 0.05em;
+            line-height: 1.8;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 980px){
+  .comp-scent-detail{
+    .scent_img_wrap{
+      padding: 20px 60px;
+      margin-bottom: 30px;
+    }
+    .scent_txt_wrap{
+      border: 0px;
+      .scent_main_ttl{
+        font-size: 2.2rem;
+        margin-bottom: 0px;
+      }
+      .scent_structure{
+        .scent_item{
+          padding: 20px;
+          align-items: baseline;
+          .title{
+            width: 120px;
+            margin-top: 0;
+            margin-bottom: 0;
+          }
+          .content{
+            width: calc(100% - 120px);
+            font-size: 1.4rem;
+          }
+        }
+      }
+    }
+  }
+}

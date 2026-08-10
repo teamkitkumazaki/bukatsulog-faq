@@ -1,0 +1,13 @@
+.comp-page-log{
+  .pagelog_txt{
+    font-size: 1.4rem;
+    letter-spacing: 0.05em;
+    line-height: 2;
+    margin-bottom: 30px;
+    @media screen and (min-width: 720px){
+      font-size: 1.5rem;
+      text-align: center;
+      margin: -20px auto 30px;
+    }
+  }
+}

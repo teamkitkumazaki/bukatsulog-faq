@@ -1,0 +1,56 @@
+.comp-button-wrap{
+  a{
+    @include flexSet;
+    align-items: center;
+    color: inherit;
+    .txt{
+      font-size: 1.6rem;
+      margin-right: 10px;
+    }
+    .caret{
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: $basicGreen;
+      @include flexSet;
+      align-items: center;
+      justify-content: center;
+      svg{
+        width: 4px;
+        .cls-1{
+          fill: #fff;
+          stroke:none;
+        }
+      }
+    }
+  }
+}
+
+
+@media screen and (min-width: 980px){
+  .comp-button-wrap{
+    a{
+      transition: color .3s;
+      will-change: color;
+      .txt{
+        font-size: 2.0rem;
+        margin-right: 15px;
+      }
+      .caret{
+        width: 26px;
+        height: 26px;
+        transition: background .3s;
+        will-change: background;
+        svg{
+          width: 6px;
+        }
+      }
+      &:hover{
+        color: $hoverColor;
+        .caret{
+          background: $hoverColor;
+        }
+      }
+    }
+  }
+}

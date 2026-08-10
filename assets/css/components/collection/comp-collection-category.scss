@@ -1,0 +1,180 @@
+.comp-collection-category{
+  .filter_ttl{
+    width: 100%;
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+  }
+  .collection_selector{
+    margin-bottom: 35px;
+    .price_filter{
+      width: 100%;
+      appearance: none;
+      font-family :inherit;
+      font-size: 1.6rem;
+      letter-spacing: 0.03em;
+      border: 0px;
+      border-bottom: 1px solid $borderColor;
+      padding: 10px 0;
+      color: inherit;
+      background-color: transparent;
+      background-image: url(https://cdn.shopify.com/s/files/1/0606/6932/9625/t/1/assets/select_caret.svg);
+      background-size: 8px;
+      background-repeat: no-repeat;
+      background-position: center right;
+      &:focus{
+        outline: none;
+      }
+    }
+  }
+  .collection_filter{
+    @include flexSet;
+    justify-content: flex-start;
+    .filter_item{
+      width: calc(50% - 10px);
+      margin-right: 20px;
+      margin-bottom: 10px;
+      border-bottom: 1px solid $borderColor;
+      &:nth-of-type(2n){
+        margin-right: 0;
+      }
+      a,button{
+        width: 100%;
+        @include flexSet;
+        align-items: center;
+        justify-content: space-between;
+        padding: 5px 0 10px;
+        color: inherit;
+        .txt{
+          font-size: 1.4rem;
+          @include grotesk;
+          &.jp{
+            font-size: 1.3rem;
+          }
+        }
+        .caret{
+          width: 22px;
+          height: 22px;
+          background: $borderColor;
+          border-radius: 50%;
+          @include flexSet;
+          align-items: center;
+          justify-content: center;
+          transition: background .5s;
+          will-change: background;
+          transform-origin: center center;
+          transform: rotate(90deg);
+          svg{
+            width: 5px;
+            height: 10px;
+            transform: translate(0.5px,0);
+            .cls-1{
+              fill: #fff;
+              stroke: none;
+            }
+          }
+        }
+        &.active_category, &.active{
+          .caret{
+            background: $basicGreen;
+          }
+        }
+      }
+    }
+  }
+  .comp-box-button{
+    max-width: 100%;
+    margin-top: 15px;
+    button{
+      padding: 12px 0;
+      .arrow{
+        transform-origin: center center;
+        transform: rotate(90deg);
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 980px){
+  .comp-collection-category{
+    .filter_ttl{
+      width: 100%;
+      font-size: 1.4rem;
+      margin-bottom: 12px;
+    }
+    .collection_selector{
+      margin-bottom: 50px;
+      .price_filter{
+        font-size: 1.5rem;
+        padding: 10px 0;
+      }
+    }
+    .collection_filter{
+      display: block;
+      .filter_item{
+        width: 100%;
+        margin-right: 0px;
+        margin-bottom: 5px;
+        border-bottom: 1px solid $borderColor;
+        &:nth-of-type(2n){
+          margin-right: 0;
+        }
+        a,button{
+          padding: 10px 0 10px;
+          transition: opacity .3s, color .3s;
+          will-change: opacity, color;
+          .txt{
+            font-size: 1.6rem;
+            &.jp{
+              font-size: 1.5rem;
+            }
+          }
+          .caret{
+            width: 22px;
+            height: 22px;
+            background: $borderColor;
+            border-radius: 50%;
+            @include flexSet;
+            align-items: center;
+            justify-content: center;
+            transition: background .5s;
+            will-change: background;
+            transform: rotate(0deg);
+            svg{
+              width: 5px;
+              height: 10px;
+              transform: translate(0.5px,0);
+              .cls-1{
+                fill: #fff;
+                stroke: none;
+              }
+            }
+          }
+          &.active_category, &.active{
+            pointer-events: none;
+            .caret{
+              background: $basicGreen;
+            }
+          }
+          &:hover{
+            color: $hoverColor;
+            opacity: 0.8;
+            .caret{
+              background: $hoverColor;
+            }
+          }
+        }
+      }
+    }
+    .comp-box-button{
+      max-width: 100%;
+      margin-top: 25px;
+      button{
+        padding: 12px;
+        justify-content: space-between;
+        .arrow{
+          transform: rotate(0deg);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,120 @@
+header{
+	width: 100vw;
+	position: fixed;
+	z-index: 500;
+	transition: all .5s;
+	top:0;
+	left:0;
+	right:0;
+	margin: auto;
+	-webkit-font-smoothing: antialiased;
+	z-index: 1000;
+	.header_inner{
+		padding-top: 12px;
+		position: relative;
+		@include flexSet;
+		align-items: center;
+		justify-content: space-between;
+		transition: border .3s, background .3s;
+		will-change: border, background;
+		.header_logo{
+			width: 200px;
+			padding-left: 20px;
+			a{
+				display: block;
+				svg{
+					width: 100%;
+					fill: #fff;
+					transition: fill .3s;
+					will-change: fill;
+				}
+			}
+		}
+		.header_contents{
+			@include flexSet;
+			align-items: center;
+			.header_menu{
+				margin-right: 10px;
+				button{
+					position: relative;
+					display: block;
+					width: 50px;
+					height: 50px;
+					border-radius: 50%;
+					background: #69C9B3;
+					transition: background .3s;
+					will-change: background;
+					span {
+						position: absolute;
+						width: 20px;
+						height: 1px;
+						left: 0;
+						right: 0;
+						margin: auto;
+						background: #fff;
+						margin: auto;
+						transition: background 0.1s, transform 0.1s;
+						will-change: background, transform;
+
+						&:nth-of-type(1) {
+							top: 22px;
+						}
+
+						&:nth-of-type(2) {
+							bottom: 22px;
+						}
+					}
+					&.hum_open {
+						span {
+							&:nth-of-type(1) {
+								transform: translateY(4px) rotate(45deg);
+							}
+
+							&:nth-of-type(2) {
+								transform: translateY(-4px) rotate(-45deg);
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	&.hum_open{
+		.header_inner{
+			.header_contents{
+				.header_menu{
+					button{
+						span {
+							&:nth-of-type(1) {
+								transform: translateY(2.5px) rotate(45deg);
+							}
+							&:nth-of-type(2) {
+								transform: translateY(-2.5px) rotate(-45deg);
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 980px){
+	header{
+		.header_inner{
+			padding: 30px 0;
+			.header_logo{
+				width: 240px;
+				padding-left: 40px;
+				a{
+				}
+			}
+			.header_contents{
+				.header_menu{
+					display: none;
+				}
+			}
+		}
+
+	}
+}

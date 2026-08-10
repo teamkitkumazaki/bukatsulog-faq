@@ -1,0 +1,80 @@
+.comp-admin-title{
+  text-align: center;
+  margin-bottom: 60px;
+  .page_ttl{
+    font-size: 2.6rem;
+    font-weight: normal;
+    letter-spacing: 0.06em;
+    margin-bottom: 15px;
+    &.en{
+      font-size: 3.0rem;
+    }
+  }
+  .page_subttl{
+    text-align: center;
+    font-weight: normal;
+    font-size: 1.6rem;
+    letter-spacing: 0.5px;
+  }
+  .page_bread{
+    margin-top: 30px;
+    font-weight: normal;
+    font-size: 1.2rem;
+    @include flexSet;
+    align-items: center;
+    justify-content: center;
+    .link_wrap{
+      a{
+        color: inherit;
+        padding-bottom: 5px;
+        border-bottom: 1px solid $black02;
+        position: relative;
+        padding-right: 0px;
+        margin-right: 20px;
+        transition: color 0.2s, border 0.2s;
+        &::after{
+          position: absolute;
+          width: 5px;
+          height: 5px;
+          content: "";
+          top: 0;
+          bottom: 0;
+          bottom: 3px;
+          right: -12px;
+          margin: auto;
+          border-top: 1px solid $black02;
+          border-right: 1px solid $black02;
+          transform: rotate(45deg);
+        }
+        &:nth-last-of-type(1){
+          padding-right:0;
+          margin-right: 0;
+          &::after{
+            display: none;
+          }
+        }
+        &:hover{
+          color: $hoverColor;
+          border-bottom: 1px solid $hoverColor;
+        }
+      }
+    }
+    .current{
+      display: none;
+    }
+  }
+}
+@media screen and (min-width: 1100px){
+  .comp-admin-title{
+    text-align: center;
+    margin-bottom: 80px;
+    .page_ttl{
+      font-size: 3.0rem;
+      margin-bottom: 20px;
+      &.en{
+        @include libre-r;
+        font-size: 3.6rem;
+      }
+    }
+  }
+}

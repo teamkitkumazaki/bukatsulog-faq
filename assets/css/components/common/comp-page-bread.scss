@@ -1,0 +1,50 @@
+.comp-page-bread{
+  font-size: 1.2rem;
+  @include flexSet;
+  justify-content: flex-start;
+  align-items: center;
+  .link_wrap{
+    a{
+      color: inherit;
+      padding-bottom: 0px;
+      position: relative;
+      padding-right: 0px;
+      margin-right: 20px;
+      color: #979797;
+      transition: color 0.2s, border 0.2s;
+      &::after{
+        position: absolute;
+        width: 5px;
+        height: 5px;
+        content: "";
+        top: 0;
+        bottom: 0;
+        right: -12px;
+        margin: auto;
+        border-top: 1px solid #979797;
+        border-right: 1px solid #979797;
+        transform: rotate(45deg);
+      }
+      &:hover{
+        color: $hoverColor;
+        border-bottom: 1px solid $hoverColor;
+      }
+      &.last{
+        padding-right: 0px;
+        margin-right: 0px;
+        &::after{
+          display: none;
+        }
+      }
+    }
+  }
+  .current{
+    color: $basicGreen;
+  }
+}
+
+@media screen and (min-width: 768px){
+  .comp-page-bread{
+    font-size: 1.3rem;
+  }
+}

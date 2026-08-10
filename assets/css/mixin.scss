@@ -1,0 +1,97 @@
+$basicGray: #f9f9f9;
+$basicBlack: #2f281e;
+$black02: #00381f;
+$bgColor: #f4f4f4;
+$borderColor: #d8d8d8;
+$basicGreen: #00381f;
+$keyColor: #00381f;
+$bgColor2: #f4f7f4;
+$insertGreen: #046734;
+$bgGreen: #2f281e;
+$hoverColor: #4C6555;
+
+/* ----- Google Fonts ----- */
+
+@font-face {
+    font-family: 'nhaasgrotesk';
+		font-weight: 400;
+    src: url('nhaasgrotesk.eot'),url('nhaasgrotesk.woff') format('woff'),
+    url('nhaasgrotesk.ttf') format('truetype'),
+}
+
+@font-face {
+    /*font-family: 'basis-grotesque';
+		font-weight: 600;
+    src: url('basis-grotesque-b.eot'),url('basis-grotesque-b.woff') format('woff'),
+    url('basis-grotesque-b.ttf') format('truetype'),*/
+}
+
+@mixin libre-r {
+  /*font-family: 'EB Garamond', 'Libre Baskerville', YakuHanMP, "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", "Sawarabi Mincho", serif;
+  font-weight: 400;
+  letter-spacing: 1px;
+  -webkit-font-smoothing: antialiased;*/
+}
+@mixin libre-b {
+  /*font-family: 'EB Garamond', 'Libre Baskerville', YakuHanMP, "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", "Sawarabi Mincho", serif;
+  font-weight: 500;
+  letter-spacing: 1px;
+  -webkit-font-smoothing: antialiased;*/
+}
+
+@mixin wrapper{
+  width: 90vw;
+  margin-left: auto;
+  margin-right: auto;
+  @media screen and (min-width: 980px){
+    width: 82vw;
+  }
+}
+
+@mixin waku{
+  width: 90vw;
+  margin-left: auto;
+  margin-right: auto;
+  @media screen and (min-width: 980px){
+    width: 82vw;
+  }
+}
+
+@mixin flexSet {
+	display: flex;
+  justify-content: center;
+	flex-wrap: wrap;
+}
+@mixin bgSet{
+  background:{
+    repeat: no-repeat;
+    position: center center;
+  }
+}
+@mixin hover{
+  transition: opacity .3s;
+  &:hover{
+    opacity: 0.75;
+  }
+}
+
+@mixin grotesk{
+  font-family: YakuHanMP,'nhaasgrotesk',"source-han-sans-japanese", sans-serif, Helvetica, Helvetica Neue, Arial, Verdana;
+	-webkit-font-smoothing: antialiased;
+  letter-spacing: 0.06em;
+}
+
+@mixin basicP{
+  font-size: 1.4rem;
+  line-height: 1.8;
+  box-sizing: border-box;
+  p{
+    margin-bottom: 1em;
+    &:nth-last-of-type(1){
+      margin-bottom: 0;
+    }
+  }
+  @media screen and (min-width: 980px){
+    font-size: 1.5rem;
+  }
+}

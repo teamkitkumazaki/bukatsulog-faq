@@ -1,0 +1,47 @@
+.comp-sns-alignment{
+  .socialplus-association-component{
+    margin-bottom: -15px;
+    .socialplus-association-row{
+      background-color: #fff;
+      border-radius: 5px;
+      div:nth-of-type(1){
+        @include flexSet;
+        align-items: center;
+        font-size: 1.4rem;
+        color:#00381f;
+        .socialplus-association-provider-icon{
+          margin: 0 !important;
+        }
+        .socialplus-association-provider-name{
+          width: auto;
+          margin-left: 10px;
+        }
+        .socialplus-association-status{
+          font-weight: normal !important;
+          color: $basicGreen !important;
+          &::before{
+            display: inline;
+            content: "(";
+            margin: 0 !important;
+            border: none !important;
+          }
+          &::after{
+            display: inline;
+            content: ")";
+          }
+        }
+      }
+      .socialplus-association-button-wrapper{
+        .socialplus-association-button{
+          font-family: inherit;
+          font-weight: normal !important;
+          border: none !important;
+          background: $basicGreen;
+          color: #fff;
+          border-radius: 5px;
+          @include hover;
+        }
+      }
+    }
+  }
+}

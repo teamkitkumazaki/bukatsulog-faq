@@ -1,0 +1,280 @@
+.comp-subscription-wrap {
+  margin-top: 0px;
+
+  .order_lot {
+    @include flexSet;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #d8d8d8;
+
+    .title {
+      width: 3em;
+      font-size: 1.6rem;
+      letter-spacing: 0.5px;
+      text-indent: 5px;
+      color: $basicGreen;
+    }
+
+    .input_wrap {
+      width: 120px;
+      position: relative;
+      background: #fff;
+      padding: 10px 0;
+      border: 1px solid #d8d8d8;
+
+      button {
+        position: absolute;
+        width: 50%;
+        height: 100%;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        font-size: 1.6rem;
+        border: none;
+        box-shadow: none;
+        background: transparent;
+        color: $basicGreen;
+        cursor: unset;
+        &.minus {
+          left: 10px;
+          text-align: left;
+        }
+
+        &.plus {
+          right: 10px;
+          text-align: right;
+        }
+
+        &.reload_button {
+          display: none;
+        }
+      }
+
+      input[name="quantity"] {
+        width: 100%;
+        border: none;
+        font-size: 1.6rem;
+        pointer-events: none;
+        text-align: center;
+        background: transparent;
+      }
+    }
+  }
+
+  .subscription_cycle{
+    margin-top: 0px;
+    margin-bottom: 20px;
+    label{
+      display: block;
+      font-size: 1.6rem;
+      letter-spacing: 0.5px;
+      text-indent: 5px;
+      color: $basicGreen;
+      margin-bottom: 15px;
+    }
+    .cycle_select{
+      width: 100%;
+      border: 1px solid #d8d8d8;
+      padding: 12px;
+      font-family: inherit;
+      font-size: 16px;
+      letter-spacing: 0.5px;
+      appearance:none;
+      border-radius: 0px;
+      background: #fff;
+      @include bgSet;
+      color: $basicGreen;
+      background-size: 8px !important;
+      background-position: center right 15px;
+      appearance: none;
+      background-image: url(https://cdn.shopify.com/s/files/1/0606/6932/9625/t/1/assets/select_caret.svg) !important;
+      &:focus{
+        outline: none;
+      }
+    }
+  }
+
+  .subscription_pop{
+    margin-bottom: 20px;
+    button{
+      @include flexSet;
+      align-items: center;
+      justify-content: flex-start;
+      position: relative;
+      font-size: 1.6rem;
+      letter-spacing: 0.5px;
+      color: $basicGreen;
+      font-family: inherit;
+      background: none;
+      border: none;
+      appearance:none;
+      padding: 0 5px;
+      .icon{
+        display: block;
+        width: 20px;
+        height: 20px;
+        margin-right: 5px;
+        @include bgSet;
+        background-size: contain;
+        background-image: url(https://cdn.shopify.com/s/files/1/0608/6233/3116/files/question.svg?v=1654511205);
+      }
+    }
+  }
+
+  .submit_button {
+    .cart_box{
+      .cart_item{
+        position: relative;
+        &#optionSelect{
+          cursor: pointer;
+        }
+        .button_wrap{
+          display: block;
+          position: relative;
+          z-index: 10;
+          text-align: center;
+          background: #2f281e;
+          pointer-events: none;
+          padding: 20px 0;
+          text-align: center;
+          color: #fff;
+          transition: background .2s;
+          .cart_in{
+            display: inline-block;
+            position: relative;
+            color: #fff;
+            font-size: 18px;
+            letter-spacing: 1.2px;
+            padding: 5px 0 5px 30px;
+            &::before{
+              display: block;
+              content: "";
+              position: absolute;
+              width: 26px;
+              height: 26px;
+              left: 0px;
+              top: 0;
+              bottom: 0;
+              margin: auto;
+              @include bgSet;
+              background-size: 22px;
+              background-image: url(https://res.cloudinary.com/dbwqcy0op/image/upload/f_auto,q_auto/v1583750805/common/cart_icon_r3jbwu.png);
+            }
+          }
+          .sub_text{
+            display: block;
+            font-size: 1.2rem;
+            padding: 10px 0 0;
+            letter-spacing: 1px;
+          }
+        }
+        .product_cart_btn{
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          opacity: 0;
+          width: 100%;
+          display: block;
+          margin: 0 auto;
+          padding: 20px 0;
+          text-indent: -9999px;
+          background: #2f281e;
+          color: #fff;
+          font-size: 18px;
+          letter-spacing: 2.5px;
+          transition: opacity .5s;
+          border-radius: 0;
+          border: none;
+          appearance: none;
+          cursor: pointer;
+        }
+        &:hover{
+          .button_wrap{
+            background: $basicGreen;
+          }
+        }
+      }
+    }
+  }
+  .cart_note{
+    @include flexSet;
+    justify-content: center;
+    margin-top: 20px;
+    button{
+      display: block;
+      padding: 0;
+      margin: 0 1em 0 0;
+      color: $basicGreen;
+      font-size: 1.4rem;
+      appearance: none;
+      background: transparent;
+      border: none;
+      box-shadow: none;
+      font-family: inherit;
+      border-bottom: 1px solid $basicGreen;
+      padding-bottom: 4px;
+      cursor: pointer;
+    }
+  }
+}
+
+@media screen and (min-width: 1100px){
+  .comp-subscription-wrap {
+    @include flexSet;
+    justify-content: space-between;
+    .order_lot {
+      display: block;
+      width: 120px;
+      margin-bottom: 0px;
+      padding-bottom: 0;
+      border-bottom: 0;
+      .title {
+        display: block;
+        width: 100%;
+        font-size: 1.6rem;
+        margin-bottom: 15px;
+      }
+
+      .input_wrap {
+        width: 100%;
+        position: relative;
+        line-height: 26px;
+        button {
+          cursor: pointer;
+          }
+        }
+
+        input[name="quantity"] {
+          width: 100%;
+          border: none;
+          font-size: 1.6rem;
+          text-align: center;
+          pointer-events: none;
+          transform:translate(-2px, -2px);
+        }
+      }
+      .subscription_cycle{
+        width: calc(100% - 130px);
+      }
+      .subscription_pop{
+        width: 100%;
+        button{
+          cursor: pointer;
+        }
+      }
+      .submit_button{
+        width: 100%;
+      }
+      .cart_note{
+        margin-top: 25px;
+        button{
+          margin: 0 1em 0 0;
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }

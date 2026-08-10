@@ -1,0 +1,91 @@
+.comp-admin-button{
+  max-width: 400px;
+  margin: 0 auto;
+  &.mt{
+    margin-top: 30px;
+    @media screen and (min-width: 720px){
+      margin-top: 40px;
+    }
+  }
+  button, a, input[type=submit],input[type=button]{
+    display: block;
+    width: 100%;
+    background: $black02;
+    color: #fff;
+    font-size: 1.7rem;
+    padding: 15px 0;
+    font-family: inherit;
+    font-weight: normal;
+    letter-spacing: 0.06em;
+    text-align: center;
+    box-shadow: none;
+    border-radius: 0px;
+    border: none;
+    transition: background .2s;
+    cursor: pointer;
+    appearance: none;
+    &:hover{
+      background: $hoverColor;
+    }
+    span{
+      position: relative;
+      display: inline-block;
+      padding-right: 25px;
+      &::after{
+        display: block;
+        content: "";
+        position: absolute;
+        top:0;
+        bottom: 0;
+        right:0;
+        margin: auto;
+        @include bgSet;
+        background-size: contain;
+        width: 18px;
+        height: 10px;
+        background-image: url(https://cdn.shopify.com/s/files/1/0606/6932/9625/t/1/assets/caret.svg);
+      }
+    }
+    &.caret_down{
+      span{
+        &::after{
+          transform: rotate(90deg);
+        }
+      }
+    }
+  }
+  &.flex{
+    a{
+      &:nth-of-type(1){
+        margin-bottom: 5px;
+      }
+    }
+    @media screen and (min-width: 720px){
+      max-width: 100%;
+      width: 100%;
+      @include flexSet;
+      justify-content: center;
+      align-items: center;
+      a{
+        width: 280px;
+        padding: 20px 0;
+        &:nth-of-type(1){
+          margin-bottom: 0;
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+  .note{
+    margin-top: 15px;
+    font-size: 1.1rem;
+    line-height: 1.76;
+    color: inherit;
+    text-align: center;
+    @media screen and (min-width: 720px){
+      margin-top: 20px;
+      font-size: 1.3rem;
+      line-height: 1.76;
+    }
+  }
+}

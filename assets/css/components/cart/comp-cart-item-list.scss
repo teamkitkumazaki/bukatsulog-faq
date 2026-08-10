@@ -1,0 +1,458 @@
+.comp-cart-item-list{
+  .cart_head{
+    display: none;
+  }
+  .minigift_added_txt{
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-top: -10px;
+    margin-bottom: 10px;
+  }
+  .item_list{
+    @include flexSet;
+    .cart_item{
+      width: 100%;
+      @include flexSet;
+      justify-content: flex-start;
+      margin-bottom: 30px;
+      padding-bottom: 30px;
+      border-bottom: 1px solid $borderColor;
+      .img_wrap{
+        width: 90px;
+        margin-right: 20px;
+        a{
+          display: block;
+          position: relative;
+          height: 90px;
+          overflow: hidden;
+          @include hover;
+          img{
+            position: absolute;
+            left: 0px;
+            right: 0px;
+            max-width: 90px;
+            height: 90px;
+          }
+        }
+      }
+      .txt_wrap{
+        width: calc(100% - 110px);
+        position: relative;
+        @include flexSet;
+        justify-content: flex-start;
+        margin-top: 5px;
+        .txt_inner{
+          width: calc(100% - 3.5em);
+          .item_info{
+            .tesage_txt{
+              font-size: 1.8rem;
+              margin-bottom: 15px;
+            }
+            .category{
+              display: block;
+              font-size: 1.1rem;
+              letter-spacing: 0.06em;
+              margin-bottom: 10px;
+            }
+            .links{
+              display: block;
+              color: inherit;
+              margin-bottom: 20px;
+              .name{
+                font-size: 1.4rem;
+                line-height: 1.4;
+                letter-spacing: 0.06em;
+                &.en{
+                  @include libre-r;
+                  font-size: 1.8rem;
+                  line-height: 1.2;
+                  letter-spacing: 0.5px;
+                }
+              }
+              .genre{
+                display: block;
+                margin-top: 10px;
+                font-size: 1.1rem;
+                color: #646464;
+                letter-spacing: 0.06em;
+              }
+            }
+            .variation{
+              display: block;
+              font-size: 1.1rem;
+              color: $black02;
+              margin-bottom: 5px;
+            }
+            .price{
+              display: block;
+              font-size: 1.2rem;
+              letter-spacing: 0.06em;
+              font-weight: 400;
+            }
+            .price_wrapper{
+              @include flexSet;
+              justify-content: flex-start;
+              align-items: center;
+              margin-bottom: 20px;
+              .price_strike{
+                font-size: 1.2rem;
+                text-decoration: line-through;;
+              }
+              .arrow{
+                font-size: 1.2rem;
+                padding: 0 3px;
+              }
+              .price{
+                font-size: 1.3rem;
+                color: #FF3938;
+              }
+            }
+          }
+          .fixed_lot{
+            position: absolute;
+            right:0;
+            bottom:0;
+            .number{
+              display: block;
+              width: 65px;
+              padding: 10px 0;
+              font-size: 1.3rem;
+              background: $bgColor;
+              text-align: center;
+            }
+          }
+          .controll_wrap{
+            .order_lot{
+              width: 100px;
+              position: relative;
+              margin-top: 20px;
+              input[type="number"],
+              .indicator{
+                width: 100px;
+                box-sizing: border-box;
+                padding: 0;
+                height: 30px;
+                line-height: 30px;
+                text-align: center;
+                border-radius: 0px;
+                border: 0px solid #e6e6e6;
+                background-color: #f4f4f4;
+                pointer-events: none !important;
+                font-size: 1.4rem;
+                font-family: inherit !important;
+                -moz-appearance:textfield;
+                &::-webkit-outer-spin-button, &::-webkit-inner-spin-button {
+                  -webkit-appearance: none;
+                  margin: 0;
+                }
+
+              }
+              button, a{
+                display: block;
+                position: absolute;
+                width: 50%;
+                height: 100%;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+                font-size: 1.6rem;
+                cursor: pointer;
+                border: none;
+                color: inherit;
+                box-shadow: none;
+                background: transparent;
+                line-height: 40px;
+                text-align: center;
+                padding: 0;
+                span{
+                  display: block;
+                  position: relative;
+                  width: 100%;
+                  height: 30px;
+                  &::before,&::after{
+                    display: block;
+                    content: "";
+                    position: absolute;
+                    top:0;
+                    bottom:0;
+                    left:0;
+                    right:0;
+                    margin: auto;
+                    background: $basicGreen;
+                  }
+                  &::before{
+                    width: 1px;
+                    height: 10px;
+                  }
+                  &::after{
+                    width: 10px;
+                    height: 1px;
+                  }
+                }
+                &.minus{
+                  left: -10px;
+                  span{
+                    &::before{
+                      display: none;
+                    }
+                  }
+                }
+                &.plus{
+                  right: -10px;
+                }
+                &.reload_button{
+                  display: none;
+                }
+              }
+              .add_cart{
+                @include flexSet;
+                align-items: center;
+                justify-content: center;
+                background: $basicGreen;
+                padding: 10px 0;
+                text-align: center;
+                font-size: 1.2rem;
+                color: #fff;
+                @include hover;
+                .txt{
+                  margin-right: 5px;
+                }
+                .plus_icon{
+                  position: relative;
+                  width: 7px;
+                  height: 7px;
+                  &::before, &::after{
+                    display: block;
+                    content: "";
+                    position: absolute;
+                    top:0;
+                    left:0;
+                    right:0;
+                    bottom:0;
+                    margin: auto;
+                    background: #fff;
+                  }
+                  &::before{
+                    width: 100%;
+                    height: 1px;
+                  }
+                  &::after{
+                    width: 1px;
+                    height: 100%;
+                  }
+                }
+              }
+            }
+            .cancel_button{
+              @include hover;
+              position: absolute;
+              bottom: 7px;
+              right: 3px;
+              display: block;
+              font-size: 1.3rem;
+              padding-bottom: 0px;
+              color: $black02;
+              border-bottom: 1px solid #B3B3B3;
+            }
+          }
+        }
+        .amount_price{
+          width: 3.5em;
+          font-size: 1.4rem;
+          text-align: right;
+        }
+      }
+      .assort_content{
+        margin-top: 15px;
+        .assort_title{
+          font-size: 1.4rem;
+        }
+        .set_content{
+          margin-top: 5px;
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 720px){
+  .comp-cart-item-list{
+    .cart_head{
+      display: block;
+      padding-bottom: 15px;
+      @include flexSet;
+      align-items: center;
+      border-bottom: 1px solid $borderColor;
+      margin-bottom: 25px;
+      .head{
+        font-size: 1.6rem;
+        &.product{
+          width: calc(100% - 300px);
+          text-indent: 10px;
+        }
+        &.lot{
+          width: 180px;
+          text-align: center;
+          text-indent: -20px;
+        }
+        &.amount{
+          width: 120px;
+          text-align: right;
+        }
+      }
+    }
+    .item_list{
+      .cart_item{
+        align-items: flex-start;
+        .img_wrap{
+          width: 100px;
+          margin-right: 25px;
+          a{
+            height: auto;
+            overflow: visible;
+            img{
+              position: static;
+              max-width: 100%;
+              height: auto;
+            }
+          }
+        }
+        .txt_wrap{
+          align-items: center;
+          width: calc(100% - 125px);
+          .txt_inner{
+            width: calc(100% - 60px);
+            @include flexSet;
+            justify-content: flex-start;
+            align-items: center;
+            .item_info{
+              width: calc(100% - 220px);
+              padding-right: 25px;
+              box-sizing: border-box;
+              .category{
+                display: block;
+                font-size: 1.3rem;
+                letter-spacing: 0.06em;
+                margin-bottom: 10px;
+              }
+              .links{
+                display: block;
+                color: inherit;
+                margin-bottom: 20px;
+                .name{
+                  font-size: 1.8rem;
+                  &.en{
+                    font-size: 2.0rem;
+                  }
+                }
+                .genre{
+                  display: block;
+                  margin-top: 10px;
+                  font-size: 1.2rem;
+                  color: #646464;
+                  letter-spacing: 0.06em;
+                }
+              }
+              .price{
+                font-size: 1.4rem;
+              }
+              .price_wrapper{
+                margin-bottom: 20px;
+                .price_strike{
+                  font-size: 1.4rem;
+                }
+                .arrow{
+                  font-size: 1.4rem;
+                }
+                .price{
+                  font-size: 1.5rem;
+                }
+              }
+            }
+            .fixed_lot{
+              width: 220px;
+              position: static;
+              .number{
+                margin: 0 auto;
+                width: 75px;
+                padding: 10px 0;
+                font-size: 1.4rem;
+                transform: translateX(-5px);
+              }
+            }
+            .controll_wrap{
+              width: 180px;
+              @include flexSet;
+              align-items: center;
+              .order_lot{
+                width: 100px;
+                margin-top: 0px;
+                input[type="number"],
+                .indicator{
+                  padding: 0;
+                  height: 40px;
+                  line-height: 40px;
+                }
+                button, a{
+                  line-height: 40px;
+                  span{
+                    height: 40px;
+                  }
+                  &.minus{
+                    left: -5px;
+                    span{
+                      &::before{
+                        display: none;
+                      }
+                    }
+                  }
+                  &.plus{
+                    right: -5px;
+                  }
+                  &.reload_button{
+                    display: none;
+                  }
+                }
+              }
+              .cancel_button{
+                position: static;
+                margin-left: 15px;
+                font-size: 1.3rem;
+              }
+            }
+          }
+          .amount_price{
+            width: 60px;
+            font-size: 1.6rem;
+            @media screen and (min-width: 1600px){
+              font-size: 16px;
+            }
+          }
+        }
+        .assort_content{
+          margin-top: 15px;
+          @include flexSet;
+          align-items: center;
+          .assort_title{
+            font-size: 1.4rem;
+            &::after{
+              display: inline-block;
+              content: ":";
+              padding: 0 0.3em;
+            }
+          }
+          .set_content{
+            margin-top: 0px;
+            font-size: 1.2rem;
+          }
+        }
+      }
+    }
+    .minigift_added_txt{
+      font-size: 1.4rem;
+      margin-top: -10px;
+      margin-bottom: 10px;
+    }
+  }
+}

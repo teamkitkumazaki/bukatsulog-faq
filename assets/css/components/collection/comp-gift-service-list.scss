@@ -1,0 +1,178 @@
+.comp-gift-service-list{
+  .service_item{
+    margin-bottom: 40px;
+    .img_wrap{
+      margin-bottom: 30px;
+    }
+    .title_wrap{
+      .service_name{
+        font-size: 2.0rem;
+        color: $basicGreen;
+        letter-spacing: 0.05em;
+        font-weight: normal;
+        margin-bottom: 15px;
+      }
+      .service_desc{
+        font-size: 1.4rem;
+        letter-spacing: 0.05em;
+        line-height: 1.8;
+        a{
+          color: #068acc;
+        }
+        span{
+          display: block;
+          margin-top: 0.5em;
+          font-size: 1.2rem;
+          color: #646464;
+        }
+      }
+    }
+  }
+  .gift_link_button{
+    width: 100%;
+    a{
+      display: block;
+      background: $basicGreen;
+      box-sizing: border-box;
+      padding: 15px 0;
+      transition: opacity 0.3s;
+      span{
+        display: block;
+        font-size: 1.6rem;
+        line-height: normal;
+        letter-spacing: 0.02em;
+        padding: 0 20px;
+        color: #fff;
+        position: relative;
+        &::after{
+          display: block;
+          content: "";
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          right: 20px;
+          margin: auto;
+          width: 24px;
+          height: 9px;
+          background-repeat: no-repeat;
+          background-position: center center;
+          background-size: contain;
+          background-image: url(https://journal.komons-japan.com/wp-content/themes/komons-theme/img/gift_service/arrow_white.png);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 720px){
+  .comp-gift-service-list{
+    @include flexSet;
+    justify-content: space-between;
+    .service_item{
+      width: 31%;
+      margin-bottom: 60px;
+      .img_wrap{
+        margin-bottom: 40px;
+      }
+      .title_wrap{
+        .service_name{
+          font-size: 2.2rem;
+          margin-bottom: 20px;
+        }
+        .service_desc{
+          font-size: 1.4rem;
+          span{
+            font-size: 1.2rem;
+          }
+        }
+      }
+    }
+    .gift_link_button{
+      width: 100%;
+      margin-top: 30px;
+      a{
+        max-width: 380px;
+        margin: 0 auto;
+        padding: 15px 0;
+        text-align: center;
+        span{
+          display: inline-block;
+          font-size: 1.6rem;
+          line-height: normal;
+          letter-spacing: 0.02em;
+          padding: 0 40px 0 0px;
+          color: #fff;
+          position: relative;
+          &::after{
+            display: block;
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0px;
+            margin: auto;
+            width: 24px;
+            height: 9px;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: contain;
+            background-image: url(https://journal.komons-japan.com/wp-content/themes/komons-theme/img/gift_service/arrow_white.png);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 980px){
+  .comp-gift-service-list{
+    @include flexSet;
+    justify-content: space-between;
+    .service_item{
+      width: 31%;
+      .img_wrap{
+        margin-bottom: 30px;
+      }
+      .title_wrap{
+        .service_name{
+          font-size: 2.0rem;
+          margin-bottom: 15px;
+        }
+        .service_desc{
+          font-size: 1.4rem;
+          span{
+            font-size: 1.2rem;
+          }
+        }
+      }
+    }
+    .comp-box-button{
+      width: 100%;
+      margin-top: 30px;
+      a{
+        max-width: 380px;
+        margin: 0 auto;
+      }
+    }
+    .gift_link_button{
+      margin-top: 20px;
+      a{
+        transition: background .3s;
+        span{
+          &::after{
+            right: 0px;
+            transition: right .3s;
+          }
+        }
+        &:hover{
+          background: $insertGreen;
+          span{
+            &::after{
+              right: -5px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

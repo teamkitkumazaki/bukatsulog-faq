@@ -1,0 +1,182 @@
+.comp-stock-list{
+  .list_wrap{
+    margin-bottom: 50px;
+    .area_ttl{
+      display: block;
+      color: #1A2134;
+      background: #f4f4f4;
+      padding: 20px 0;
+      text-align: center;
+      font-size: 1.8rem;
+      letter-spacing: 0.8px;
+      margin-bottom: 30px;
+    }
+    .list_contents{
+      .description{
+        @include basicP;
+        word-break: break-all;
+        h3{
+          font-size: 1.6rem;
+          line-height: 1.5;
+          margin-top: 30px;
+          margin-bottom: 20px;
+          background: #69C9B3;
+          padding: 10px;
+          color: #1A2134;
+        }
+        h4{
+          font-size: 1.6rem;
+          font-weight: bold;
+          text-decoration: underline;
+          line-height: 1.5;
+          margin-top: 20px;
+          margin-bottom: 15px;
+        }
+        ul{
+          margin-bottom: 1.25em;
+        }
+        ol{
+          padding-left: 1rem;
+          margin-bottom: 1.25em;
+        }
+        a{
+          color:inherit;
+          text-decoration: underline;
+        }
+        .img_wrapper{
+          @include flexSet;
+          justify-content: center;
+          padding: 30px;
+          background: rgba(#fff,0.5);
+          margin: 30px 0;
+          .img_item{
+            width: 70%;
+            margin-right: 6%;
+            &:nth-last-of-type(1){
+              margin-right: 0;
+            }
+          }
+          @media screen and (min-width: 980px){
+            padding: 60px 100px;
+            .img_item{
+              width: 50%;
+              margin-right: 6%;
+              &:nth-last-of-type(1){
+                margin-right: 0;
+              }
+            }
+          }
+        }
+        .table_wrapper{
+
+        }
+        table{
+          width: 100%;
+          margin: 30px 0px;
+          thead{
+            border-top: 1px solid #fff;
+            border-left: 1px solid #fff;
+            th, td{
+              box-sizing: border-box;
+              font-weight: normal;
+              padding: 12px 5px;
+              text-align: center;
+              border-right: solid 1px #fff;
+              border-bottom: solid 1px #fff;
+              vertical-align: middle;
+              background: #4544F0;
+            }
+          }
+          tbody{
+            width: 100%;
+            tr{
+              border-left: solid 1px #fff;
+              th, td{
+                box-sizing: border-box;
+                font-weight: normal;
+                padding: 12px 5px;
+                text-align: left;
+                border-right: solid 1px #fff;
+                border-bottom: solid 1px #fff;
+                vertical-align: middle;
+              }
+              th{
+                border-top: 1px solid #fff;
+                font-size: 1.3rem;
+                text-align: left;
+              }
+              td{
+                font-size: 1.3rem;
+                word-break: break-all;
+                text-align: center;
+                span{
+                  font-size: 1.0rem;
+                  display: block;
+                  word-break: break-all;
+                }
+                &:nth-of-type(1){
+                  text-align: left;
+                  line-height: 1.5;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 720px){
+  .comp-stock-list{
+    .store_list_wrap{
+      margin-bottom: 50px;
+      .area_ttl{
+        display: block;
+        background: #f4f4f4;
+        padding: 20px 0;
+        text-align: center;
+        font-size: 1.6rem;
+        letter-spacing: 0.8px;
+        margin-bottom: 30px;
+      }
+      .store_item{
+        display: block;
+        margin-bottom: 30px;
+        padding: 0 0px 30px;
+        border-bottom: 1px solid #d8d8d8;
+        &:nth-last-of-type(1){
+          margin-bottom: 0px;
+          padding: 0 5px 0px;
+          border-bottom: 0px solid #d8d8d8;
+        }
+        .shop_info{
+          max-width: 100%;
+          .shop_name{
+            display: block;
+            font-size: 1.6rem;
+            padding-left: 0;
+            margin-bottom: 10px;
+            &::after{
+              top: 5px;
+              bottom: unset;
+            }
+          }
+          .address{
+            font-size: 1.3rem;
+            line-height: 1.6;
+            span{
+              display: block;
+              padding-left: 0rem;
+            }
+          }
+          .detail_txt{
+            margin-top: 15px;
+            font-size: 1.3rem;
+          }
+        }
+      }
+    }
+  }
+}

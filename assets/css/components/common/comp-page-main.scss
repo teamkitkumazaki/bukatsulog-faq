@@ -1,0 +1,71 @@
+.comp-page-main{
+  position: relative;
+  .main_image{
+    .pc_img{
+      display: none;
+    }
+  }
+  .main_ttl{
+    position: absolute;
+    top:20px;
+    bottom:0;
+    left:0;
+    right:0;
+    margin: auto;
+    padding: 0;
+    background: transparent;
+    height: 20px;
+    text-align: center;
+    color: #fff;
+    .ttl_en{
+      @include grotesk;
+      display: block;
+      font-size: 2.4rem;
+      margin-bottom: 0px;
+    }
+    .ttl_jp{
+      font-size: 1.3rem;
+    }
+  }
+}
+
+@media screen and (min-width: 980px){
+  .comp-page-main{
+    position: relative;
+    .main_image{
+      width: 100%;
+      height: 100vh;
+      min-height: 600px;
+      max-height: 900px;
+      .sp_img{
+        display: none;
+      }
+      .pc_img{
+        display: block;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .main_ttl{
+      position: absolute;
+      top:0;
+      bottom:0;
+      left:0;
+      right:0;
+      margin: auto;
+      padding: 0;
+      background: transparent;
+      @include wrapper;
+      text-align: left;
+      height: 55px;
+      .ttl_en{
+        font-size: 2.8rem;
+        margin-bottom: 0px;
+      }
+      .ttl_jp{
+        font-size: 1.6rem;
+      }
+    }
+  }
+}

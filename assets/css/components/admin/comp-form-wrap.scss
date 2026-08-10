@@ -1,0 +1,692 @@
+.comp-form-wrap{
+  .form_item{
+    margin-bottom: 18px;
+    padding-bottom: 25px;
+    border-bottom: 1px dotted $borderColor;
+    @media screen  and (min-width: 720px){
+      margin-bottom: 25px;
+      padding-bottom: 30px;
+    }
+    .attention{
+      width: 100%;
+      display: block;
+      margin-top: 10px;
+      color: red;
+      text-align: left;
+      font-size: 1.2rem;
+    }
+    .notice{
+      width: 100%;
+      display: block;
+      line-height: 1.8;
+      margin-top: 10px;
+      text-align: left;
+      font-size: 1.2rem;
+      a{
+        margin-top: 5px;
+        font-size: 1.4rem;
+        display: inline-block;
+        color: inherit;
+        text-decoration: underline;
+      }
+      @media screen  and (min-width: 720px){
+        margin-top: 15px;
+        font-size: 1.3rem;
+      }
+    }
+    &.b_none{
+      margin-bottom: 0px;
+      padding-bottom: 0px;
+      border-bottom: 0px dotted $borderColor;
+    }
+    .label_wrap{
+      @include flexSet;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 12px;
+      label{
+        font-size: 1.6rem;
+        &.no_label{
+          display: block;
+          margin-top: 5px;
+        }
+        span{
+          display: inline-block;
+          padding-left: 0.5em;
+          font-size: 1.2rem;
+        }
+      }
+      .required{
+        padding: 7px;
+        background: $basicGreen;
+        color:#fff;
+        font-size: 1.2rem;
+      }
+      .optional{
+        padding: 7px;
+        background: #f4f4f4;
+        font-size: 1.2rem;
+      }
+      @media screen  and (min-width: 720px){
+        justify-content: flex-start;
+        margin-bottom: 15px;
+        label{
+          margin-right: 12px;
+          font-size: 1.6rem;
+        }
+      }
+    }
+    .form_box{
+      input[type="text"],
+      input[type="email"],
+      input[type="number"],
+      input[type="tel"],
+      input[type="date"]{
+        display: block;
+        width: 100%;
+        padding: 0 12px;
+        height: 50px;
+        line-height: 50px;
+        font-size: 1.6rem;
+        border: 1px solid #f4f4f4;
+        background: #f4f4f4;
+        box-sizing: border-box;
+        font-family: inherit;
+        color: inherit;
+        border-radius: 0;
+        -webkit-appearance: none;
+        &:focus{
+          outline: none;
+        }
+        &::placeholder {
+          color: #acacac;
+          font-size: 1.5rem;
+        }
+        &.errorInput{
+          border: 1px solid red;
+        }
+      }
+      select{
+        display: block;
+        width: 100%;
+        padding: 0px 12px !important;
+        font-size: 1.6rem;
+        height: 50px;
+        line-height: 50px;
+        border: 1px solid #f4f4f4;
+        box-sizing: border-box;
+        background-image: url(../images/common/select_caret.svg);
+        background-size: 8px;
+        background-repeat: no-repeat;
+        background-position: center right 12px;
+        border-radius: 0;
+        background-color: #f4f4f4;
+        -webkit-appearance: none;
+        color: inherit;
+        font-family: inherit;
+        &::placeholder{
+          color: #acacac;
+        }
+        option{
+          color: #acacac;
+          font-size: 1.6rem;
+        }
+        &:focus{
+          outline: none;
+        }
+        &.errorInput{
+          border: 1px solid red;
+        }
+      }
+      textarea{
+        display: block;
+        width: 100%;
+        padding: 12px 12px;
+        font-size: 1.6rem;
+        height: 180px;
+        background: #f4f4f4;
+        line-height: 1.6;
+        border: 1px solid #f4f4f4;
+        box-sizing: border-box;
+        border-radius: 0;
+        -webkit-appearance: none;
+        color: inherit;
+        font-family: inherit;
+        &:focus{
+          outline: none;
+        }
+        &.errorInput{
+          border: 1px solid red;
+        }
+      }
+      .name_wrap{
+        @include flexSet;
+        justify-content: space-between;
+        .name_flex{
+          width: calc(50% - 2.5px);
+        }
+      }
+      .postal_wrap{
+        @include flexSet;
+        justify-content: space-between;
+        align-items: center;
+        input[type=text]{
+          width: 50%;
+        }
+        .search_button{
+          width: calc(50% - 5px);
+          font-size: 1.3rem;
+          color: #fff;
+          background: $basicGreen;
+          line-height: 48px;
+        }
+        @media screen  and (min-width: 720px){
+          input[type=text]{
+            width: calc(100% - 300px);
+          }
+          .search_button{
+            width: 290px;
+            font-size: 1.4rem;
+            line-height: 48px;
+          }
+        }
+      }
+      .date_box{
+        @include flexSet;
+        align-items: center;
+        margin-top: 15px;
+        .txt02{
+          width: 10%;
+          margin-right: 10px;
+          &:nth-last-of-type(1){
+            margin-right: 0;
+          }
+        }
+        .txt01{
+          width: 5%;
+          margin-right: 10px;
+          &.end{
+            margin-right: 0;
+          }
+          &:nth-last-of-type(1){
+            margin-right: 0;
+          }
+        }
+        input[name=birthYear]{
+          width: 25%;
+          margin-right: 10px;
+        }
+        input[name=birthMonth],input[name=birthDay]{
+          width: 15%;
+          margin-right: 10px;
+        }
+        @media screen  and (min-width: 720px){
+          margin-top: 20px;
+          .txt02{
+            width: 45px;
+            margin-right: 10px;
+            &:nth-last-of-type(1){
+              margin-right: 0;
+            }
+          }
+          .txt01{
+            width: 20px;
+            margin-right: 10px;
+            &:nth-last-of-type(1){
+              margin-right: 0;
+            }
+          }
+          input[name=birthYear]{
+            width: 25%;
+            margin-right: 10px;
+          }
+          input[name=birthMonth],input[name=birthDay]{
+            width: 15%;
+            margin-right: 10px;
+          }
+        }
+      }
+      .radio_box{
+        width: 100%;
+        @include flexSet;
+        margin-top: 15px;
+        margin-bottom: -15px;
+        @media screen  and (min-width: 720px){
+          margin-top: 20px;
+        }
+        label{
+          @include flexSet;
+          align-items: center;
+          margin-right: 20px;
+          margin-bottom: 12px;
+          cursor: pointer;
+          @media screen  and (min-width: 720px){
+            margin-bottom: 15px;
+          }
+          input[type="checkbox"], input[type="radio"]{
+            display: none;
+          }
+          .radio_checker{
+            display: block;
+            width: 16px;
+            height: 16px;
+            margin-right: 10px;
+            background: #f4f4f4;
+            margin-bottom: -2px;
+            cursor: pointer;
+            position: relative;
+            border: 1px solid $borderColor;
+            &::after{
+              display: block;
+              content: "";
+              position: absolute;
+              top:0;
+              bottom:0;
+              left:0;
+              right:0;
+              margin: auto;
+              width: 0;
+              height: 0;
+              background: $basicGreen;
+              transition: width .15s, height .15s;
+              will-change: width, height;
+            }
+          }
+          input[type="radio"] + .radio_checker{
+            border-radius: 0px;
+            &::after{
+              border-radius: 0px;
+            }
+          }
+          input[type="checkbox"]:checked + .radio_checker,
+          input[type="radio"]:checked + .radio_checker{
+            border: 1px solid #acacac;
+            &::after{
+              width: 7px;
+              height: 7px;
+            }
+          }
+          .name{
+            font-size: 1.3rem;
+            line-height: 1.75;
+            letter-spacing: 0.64px;
+            cursor: pointer;
+          }
+        }
+        .optinonal_input{
+          width: 100%;
+          margin-top: 10px;
+          margin-bottom: 10px;
+        }
+      }
+      .notice_list{
+        background: #f4f4f4;
+        padding: 20px;
+        line-height: 1.8;
+        font-size: 1.3rem;
+        text-align: left;
+        margin-top: 20px;
+        @media screen and (min-width: 720px){
+          font-size: 1.4rem;
+          background: $bgColor;
+        }
+        li{
+          margin-bottom: 5px;
+          &:nth-last-of-type(1){
+            margin-bottom: 0;
+          }
+        }
+      }
+      .privacy_wrap{
+        border: 1px solid $borderColor;
+        padding: 20px;
+        height: 200px;
+        box-sizing: border-box;
+        overflow: scroll;
+        line-height: 1.8;
+        font-size: 1.3rem;
+        margin-top: 25px;
+        text-align: left;
+        p{
+          margin-bottom: 1.5rem;
+          &:nth-last-of-type(1){
+            margin-bottom:0;
+          }
+        }
+      }
+    }
+  }
+  .privacy_wrap{
+    margin-top: 30px;
+    .privacy_ttl{
+      font-size: 1.6rem;
+      margin-bottom: 20px;
+    }
+    .privacy_inner{
+      padding: 20px;
+      border: 1px solid $borderColor;
+      background: #f4f4f4;
+      height: 200px;
+      overflow: scroll;
+      margin-bottom: 20px;
+      .privacy_content{
+        font-size: 1.3rem;
+        line-height: 1.8;
+        h5{
+          font-size: 1.5rem;
+          margin-bottom: 5px;
+        }
+        p{
+          margin-bottom: 15px;
+          &:nth-last-of-type(1){
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+    .agreement{
+      .agree_wrap{
+        label{
+          @include flexSet;
+          align-items: center;
+          justify-content: center;
+          input[type="checkbox"], input[type="radio"]{
+            display: none;
+          }
+          .radio_checker{
+            display: block;
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+            background: #f4f4f4;
+            margin-bottom: -2px;
+            cursor: pointer;
+            position: relative;
+            border: 1px solid $borderColor;
+            &::after{
+              display: block;
+              content: "";
+              position: absolute;
+              top:0;
+              bottom:0;
+              left:0;
+              right:0;
+              margin: auto;
+              width: 0;
+              height: 0;
+              background: $basicGreen;
+              transition: width .15s, height .15s;
+              will-change: width, height;
+            }
+          }
+          input[type="radio"] + .radio_checker{
+            border-radius: 0px;
+            &::after{
+              border-radius: 0px;
+            }
+          }
+          input[type="checkbox"]:checked + .radio_checker,
+          input[type="radio"]:checked + .radio_checker{
+            border: 1px solid #acacac;
+            &::after{
+              width: 9px;
+              height: 9px;
+            }
+          }
+          .name{
+            font-size: 1.4rem;
+            line-height: 1.75;
+            letter-spacing: 0.64px;
+            cursor: pointer;
+            margin-top: 2px;
+            a{
+              color: #068acc;
+            }
+          }
+        }
+      }
+    }
+  }
+  .ajax_loader{
+    width: 100%;
+    height: 0px;
+    overflow: hidden;
+    transition: height .2s;
+    will-change: height;
+    &.loading_state{
+      height: 75px;
+    }
+    .loading{
+      display: block;
+      width: 100%;
+      height: 100px;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 30px;
+      background-image: url(https://komons-japan.com/cdn/shop/t/8/assets/loading.svg);
+    }
+  }
+  .status_message{
+    height: 0;
+    overflow: hidden;
+    text-align: left;
+    font-size: 16px;
+    transition: height .2s;
+    will-change: height;
+    text-align: center;
+    .text{
+      display: block;
+      background: #f4f4f4;
+      border: 1px solid #f4f4f4;
+      padding: 15px;
+      font-size: 1.4rem;
+      line-height: 1.6;
+      margin-top: 20px;
+      span{
+        display: block;
+      }
+      @media screen and (min-width: 980px){
+        background: $bgColor;
+        span{
+          display: inline;
+        }
+      }
+    }
+    &.complete{
+      height: 105px;
+      margin-bottom: 0px;
+    }
+    &.error{
+      height: 100px;
+      margin-bottom: 0px;
+      .text{
+        color: #D62538;
+        border: 1px solid #D62538;
+      }
+    }
+  }
+  .submit_wrap{
+    max-width: 100%;
+    margin: 30px auto 0;
+    position: relative;
+    cursor: pointer;
+    background: $basicGreen;
+    color: #fff;
+    padding: 25px 0;
+    border-radius: 0px;
+    cursor: pointer;
+    transition: background .3s, opacity .3s;;
+    will-change: background, opacity;
+    font-family: inherit;
+    &.disabled{
+      background: #acacac;
+      opacity: 0.75;
+      pointer-events: none;
+      user-select: none;
+    }
+    &.completed{
+      opacity: 0.5;
+      pointer-events: none;
+      user-select: none;
+    }
+    &:hover{
+      background: $basicGreen;
+    }
+    .text_wrap{
+      text-align: center;
+      .ja{
+        display: block;
+        font-size: 1.6rem;
+        letter-spacing: 0.7px;
+        pointer-events: none;
+        span{
+          position: relative;
+          padding-right: 17px;
+          &::after{
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            display: block;
+            content: "";
+            top: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+            border-top: 2px solid #fff;
+            border-right: 2px solid #fff;
+            transform: rotate(45deg);
+            transition: border 0.2s;
+            will-change: border;
+          }
+        }
+      }
+      input[type="button"],input[type="submit"] {
+        position: absolute;
+        top:0;
+        bottom:0;
+        left:0;
+        right:0;
+        margin: auto;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        z-index: 10;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 980px){
+  .comp-form-wrap{
+    .form_item{
+      margin-bottom: 25px;
+      padding-bottom: 25px;
+      border-bottom: 1px dotted $borderColor;
+      .attention{
+        margin-top: 10px;
+        font-size: 1.2rem;
+      }
+      &.b_none{
+        margin-bottom: 0px;
+      }
+      .label_wrap{
+        margin-bottom: 15px;
+        label{
+          margin-right: 15px;
+        }
+        .required{
+          padding: 7px;
+          background: $basicGreen;
+          font-size: 1.2rem;
+          color: #fff;
+        }
+        .optional{
+          padding: 7px;
+          border: 1px solid $basicGreen;
+          font-size: 1.2rem;
+        }
+      }
+      .form_box{
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        input[type="tel"],
+        input[type="date"]{
+          border: 0px solid $borderColor;
+          background: $bgColor;
+          box-sizing: border-box;
+          &::placeholder {
+            color: #979797;
+            font-size: 1.5rem;
+          }
+        }
+        select{
+          padding: 0px 12px !important;
+          font-size: 1.6rem;
+          border: 0px solid $borderColor;
+          background-color: $bgColor;
+          &::placeholder{
+            color: #979797;
+          }
+          option{
+            color: #979797;
+          }
+        }
+        textarea{
+          padding: 12px 12px;
+          height: 180px;
+          border: 0px solid $borderColor;
+          background-color: $bgColor;
+        }
+        .name_wrap{
+          .name_flex{
+            width: calc(50% - 5px);
+          }
+        }
+        .radio_box{
+          margin-bottom: -15px;
+          label{
+            .radio_checker{
+              background: $bgColor;
+              margin-bottom: -2px;
+              border: 1px solid $borderColor;
+              &::after{
+                background: $basicGreen;
+              }
+            }
+            input[type="checkbox"]:checked + .radio_checker,
+            input[type="radio"]:checked + .radio_checker{
+              border: 1px solid $borderColor;
+            }
+            .name{
+              font-size: 1.5rem;
+            }
+          }
+        }
+      }
+    }
+    .privacy_wrap{
+      margin-top: 30px;
+      .agreement{
+        .agree_wrap{
+          label{
+            .radio_checker{
+              background: $bgColor;
+              margin-bottom: -2px;
+              border: 1px solid $borderColor;
+              &::after{
+                background: $basicGreen;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .submit_wrap{
+      max-width: 360px;
+      margin: 30px auto 0;
+    }
+  }
+}
