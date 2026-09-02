@@ -1682,11 +1682,11 @@ button {
 }
 @media screen and (min-width: 980px) {
   .comp-stock-list .list_wrap .list_contents .description .img_wrapper {
-    padding: 60px 100px;
+    padding: 60px 80px;
   }
   .comp-stock-list .list_wrap .list_contents .description .img_wrapper .img_item {
-    width: 50%;
-    margin-right: 6%;
+    width: 45%;
+    margin-right: 5%;
   }
   .comp-stock-list .list_wrap .list_contents .description .img_wrapper .img_item:nth-last-of-type(1) {
     margin-right: 0;
