@@ -1,0 +1,20 @@
+.page-contact{
+  padding: 90px 0 60px;
+  .section-underpage{
+    .comp-section-ttl{
+      margin-bottom: 30px;
+    }
+  }
+}
+
+@media screen and (min-width: 768px){
+  .page-contact{
+    padding: 120px 0 120px;
+    .section-underpage{
+      .comp-section-ttl{
+        text-align: center;
+        margin-bottom: 30px;
+      }
+    }
+  }
+}

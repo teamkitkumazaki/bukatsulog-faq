@@ -400,6 +400,11 @@ button {
   margin-bottom: 20px;
 }
 
+@media screen and (min-width: 980px) {
+  .comp-hummenu {
+    display: none;
+  }
+}
 /* 共通 */
 .comp-button-wrap a {
   display: -webkit-box;
@@ -3272,7 +3277,7 @@ button {
   padding-bottom: 25px;
   border-bottom: 1px dotted #d8d8d8;
 }
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 768px) {
   .comp-form-wrap .form_item {
     margin-bottom: 25px;
     padding-bottom: 30px;
@@ -3301,7 +3306,7 @@ button {
   color: inherit;
   text-decoration: underline;
 }
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 768px) {
   .comp-form-wrap .form_item .notice {
     margin-top: 15px;
     font-size: 1.3rem;
@@ -3343,16 +3348,18 @@ button {
 }
 .comp-form-wrap .form_item .label_wrap .required {
   padding: 7px;
-  background: #00381f;
-  color: #fff;
+  background: #69C9B3;
   font-size: 1.2rem;
+  color: #fff;
 }
 .comp-form-wrap .form_item .label_wrap .optional {
   padding: 7px;
-  background: #f4f4f4;
+  background: transparent;
+  border: 1px solid #69C9B3;
+  color: #69C9B3;
   font-size: 1.2rem;
 }
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 768px) {
   .comp-form-wrap .form_item .label_wrap {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
@@ -3362,6 +3369,23 @@ button {
   .comp-form-wrap .form_item .label_wrap label {
     margin-right: 12px;
     font-size: 1.6rem;
+  }
+  .comp-form-wrap .form_item .label_wrap label.no_label {
+    display: block;
+    margin-top: 5px;
+  }
+  .comp-form-wrap .form_item .label_wrap label span {
+    display: inline-block;
+    padding-left: 0.5em;
+    font-size: 1.2rem;
+  }
+  .comp-form-wrap .form_item .label_wrap .required {
+    padding: 7px;
+    font-size: 1.2rem;
+  }
+  .comp-form-wrap .form_item .label_wrap .optional {
+    padding: 7px;
+    font-size: 1.2rem;
   }
 }
 .comp-form-wrap .form_item .form_box input[type=text],
@@ -3375,14 +3399,21 @@ button {
   height: 50px;
   line-height: 50px;
   font-size: 1.6rem;
-  border: 1px solid #f4f4f4;
-  background: #f4f4f4;
+  border: 1px solid #fff;
+  background: #fff;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: inherit;
   color: inherit;
   border-radius: 0;
   -webkit-appearance: none;
+}
+.comp-form-wrap .form_item .form_box input[type=text].bg,
+.comp-form-wrap .form_item .form_box input[type=email].bg,
+.comp-form-wrap .form_item .form_box input[type=number].bg,
+.comp-form-wrap .form_item .form_box input[type=tel].bg,
+.comp-form-wrap .form_item .form_box input[type=date].bg {
+  background-color: #f4f4f4;
 }
 .comp-form-wrap .form_item .form_box input[type=text]:focus,
 .comp-form-wrap .form_item .form_box input[type=email]:focus,
@@ -3429,15 +3460,15 @@ button {
   font-size: 1.6rem;
   height: 50px;
   line-height: 50px;
-  border: 1px solid #f4f4f4;
+  border: 1px solid #fff;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  background-image: url(../images/common/select_caret.svg);
+  background-image: url(./select_caret.svg);
   background-size: 8px;
   background-repeat: no-repeat;
   background-position: center right 12px;
   border-radius: 0;
-  background-color: #f4f4f4;
+  background-color: #fff;
   -webkit-appearance: none;
   color: inherit;
   font-family: inherit;
@@ -3457,6 +3488,9 @@ button {
 .comp-form-wrap .form_item .form_box select::placeholder {
   color: #acacac;
 }
+.comp-form-wrap .form_item .form_box select.bg {
+  background-color: #f4f4f4;
+}
 .comp-form-wrap .form_item .form_box select option {
   color: #acacac;
   font-size: 1.6rem;
@@ -3473,15 +3507,18 @@ button {
   padding: 12px 12px;
   font-size: 1.6rem;
   height: 180px;
-  background: #f4f4f4;
+  background: #fff;
   line-height: 1.6;
-  border: 1px solid #f4f4f4;
+  border: 1px solid #fff;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-radius: 0;
   -webkit-appearance: none;
   color: inherit;
   font-family: inherit;
+}
+.comp-form-wrap .form_item .form_box textarea.bg {
+  background-color: #f4f4f4;
 }
 .comp-form-wrap .form_item .form_box textarea:focus {
   outline: none;
@@ -3531,7 +3568,7 @@ button {
   background: #00381f;
   line-height: 48px;
 }
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 768px) {
   .comp-form-wrap .form_item .form_box .postal_wrap input[type=text] {
     width: calc(100% - 300px);
   }
@@ -3580,7 +3617,7 @@ button {
   width: 15%;
   margin-right: 10px;
 }
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 768px) {
   .comp-form-wrap .form_item .form_box .date_box {
     margin-top: 20px;
   }
@@ -3620,7 +3657,7 @@ button {
   margin-top: 15px;
   margin-bottom: -15px;
 }
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 768px) {
   .comp-form-wrap .form_item .form_box .radio_box {
     margin-top: 20px;
   }
@@ -3641,7 +3678,7 @@ button {
   margin-bottom: 12px;
   cursor: pointer;
 }
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 768px) {
   .comp-form-wrap .form_item .form_box .radio_box label {
     margin-bottom: 15px;
   }
@@ -3654,11 +3691,11 @@ button {
   width: 16px;
   height: 16px;
   margin-right: 10px;
-  background: #f4f4f4;
+  background: #d8d8d8;
   margin-bottom: -2px;
   cursor: pointer;
   position: relative;
-  border: 1px solid #d8d8d8;
+  border: 1px solid #fff;
 }
 .comp-form-wrap .form_item .form_box .radio_box label .radio_checker::after {
   display: block;
@@ -3703,14 +3740,14 @@ button {
   margin-bottom: 10px;
 }
 .comp-form-wrap .form_item .form_box .notice_list {
-  background: #f4f4f4;
+  background: #fff;
   padding: 20px;
   line-height: 1.8;
   font-size: 1.3rem;
   text-align: left;
   margin-top: 20px;
 }
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 768px) {
   .comp-form-wrap .form_item .form_box .notice_list {
     font-size: 1.4rem;
     background: #f4f4f4;
@@ -3750,7 +3787,7 @@ button {
 .comp-form-wrap .privacy_wrap .privacy_inner {
   padding: 20px;
   border: 1px solid #d8d8d8;
-  background: #f4f4f4;
+  background: #fff;
   height: 200px;
   overflow: scroll;
   margin-bottom: 20px;
@@ -3791,7 +3828,7 @@ button {
   width: 20px;
   height: 20px;
   margin-right: 10px;
-  background: #f4f4f4;
+  background: #d8d8d8;
   margin-bottom: -2px;
   cursor: pointer;
   position: relative;
@@ -3856,7 +3893,7 @@ button {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 30px;
-  background-image: url(https://komons-japan.com/cdn/shop/t/8/assets/loading.svg);
+  background-image: url(../img/common/loading.svg);
 }
 .comp-form-wrap .status_message {
   height: 0;
@@ -3870,8 +3907,8 @@ button {
 }
 .comp-form-wrap .status_message .text {
   display: block;
-  background: #f4f4f4;
-  border: 1px solid #f4f4f4;
+  background: #fff;
+  border: 1px solid #fff;
   padding: 15px;
   font-size: 1.4rem;
   line-height: 1.6;
@@ -3905,9 +3942,9 @@ button {
   margin: 30px auto 0;
   position: relative;
   cursor: pointer;
-  background: #00381f;
+  background: #4544F0;
   color: #fff;
-  padding: 25px 0;
+  padding: 20px 0;
   border-radius: 0px;
   cursor: pointer;
   -webkit-transition: background 0.3s, opacity 0.3s;
@@ -3933,7 +3970,7 @@ button {
           user-select: none;
 }
 .comp-form-wrap .submit_wrap:hover {
-  background: #00381f;
+  opacity: 0.8;
 }
 .comp-form-wrap .submit_wrap .text_wrap {
   text-align: center;
@@ -3980,7 +4017,11 @@ button {
   cursor: pointer;
 }
 
-@media screen and (min-width: 980px) {
+@media screen and (min-width: 768px) {
+  .comp-form-wrap {
+    max-width: 780px;
+    margin: 0 auto;
+  }
   .comp-form-wrap .form_item {
     margin-bottom: 25px;
     padding-bottom: 25px;
@@ -4001,13 +4042,11 @@ button {
   }
   .comp-form-wrap .form_item .label_wrap .required {
     padding: 7px;
-    background: #00381f;
     font-size: 1.2rem;
     color: #fff;
   }
   .comp-form-wrap .form_item .label_wrap .optional {
     padding: 7px;
-    border: 1px solid #00381f;
     font-size: 1.2rem;
   }
   .comp-form-wrap .form_item .form_box input[type=text],
@@ -4015,8 +4054,8 @@ button {
   .comp-form-wrap .form_item .form_box input[type=number],
   .comp-form-wrap .form_item .form_box input[type=tel],
   .comp-form-wrap .form_item .form_box input[type=date] {
-    border: 0px solid #d8d8d8;
-    background: #f4f4f4;
+    border: 0px solid #fff;
+    background: #fff;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
   }
@@ -4047,8 +4086,8 @@ button {
   .comp-form-wrap .form_item .form_box select {
     padding: 0px 12px !important;
     font-size: 1.6rem;
-    border: 0px solid #d8d8d8;
-    background-color: #f4f4f4;
+    border: 0px solid #fff;
+    background-color: #fff;
   }
   .comp-form-wrap .form_item .form_box select::-webkit-input-placeholder {
     color: #979797;
@@ -4071,8 +4110,8 @@ button {
   .comp-form-wrap .form_item .form_box textarea {
     padding: 12px 12px;
     height: 180px;
-    border: 0px solid #d8d8d8;
-    background-color: #f4f4f4;
+    border: 0px solid #fff;
+    background-color: #fff;
   }
   .comp-form-wrap .form_item .form_box .name_wrap .name_flex {
     width: calc(50% - 5px);
@@ -4081,16 +4120,16 @@ button {
     margin-bottom: -15px;
   }
   .comp-form-wrap .form_item .form_box .radio_box label .radio_checker {
-    background: #f4f4f4;
+    background: #d8d8d8;
     margin-bottom: -2px;
-    border: 1px solid #d8d8d8;
+    border: 1px solid #fff;
   }
   .comp-form-wrap .form_item .form_box .radio_box label .radio_checker::after {
     background: #00381f;
   }
   .comp-form-wrap .form_item .form_box .radio_box label input[type=checkbox]:checked + .radio_checker,
   .comp-form-wrap .form_item .form_box .radio_box label input[type=radio]:checked + .radio_checker {
-    border: 1px solid #d8d8d8;
+    border: 1px solid #fff;
   }
   .comp-form-wrap .form_item .form_box .radio_box label .name {
     font-size: 1.5rem;
@@ -4099,7 +4138,7 @@ button {
     margin-top: 30px;
   }
   .comp-form-wrap .privacy_wrap .agreement .agree_wrap label .radio_checker {
-    background: #f4f4f4;
+    background: #d8d8d8;
     margin-bottom: -2px;
     border: 1px solid #d8d8d8;
   }
@@ -4209,5 +4248,21 @@ button {
   }
   .page-guide .section-guide .guide_flex_wrap .guide_contents {
     width: 60%;
+  }
+}
+.page-contact {
+  padding: 90px 0 60px;
+}
+.page-contact .section-underpage .comp-section-ttl {
+  margin-bottom: 30px;
+}
+
+@media screen and (min-width: 768px) {
+  .page-contact {
+    padding: 120px 0 120px;
+  }
+  .page-contact .section-underpage .comp-section-ttl {
+    text-align: center;
+    margin-bottom: 30px;
   }
 }
